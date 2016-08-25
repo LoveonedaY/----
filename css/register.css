@@ -1,0 +1,156 @@
+/*css document*/
+
+#main {
+    overflow: hidden;
+    width: 1205px;
+    margin: 0 auto;
+    margin-bottom:95px;
+    
+}
+
+#main_l,
+#main_r {
+    width: 550px;
+    height: 432px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#main_l {
+    float: left;
+}
+
+#main_r {
+    float: right;
+}
+
+#main_l p,
+#main p {
+    width: 530px;
+    font-size: 22px;
+    line-height: 40px;
+    color: #e6212a;
+    text-align: left;
+    font-weight: 300;
+    padding-left: 20px;
+    border-bottom: 1px solid #e6212a;
+}
+
+#main_l label {
+    font-size: 12px;
+    color: #666;
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+}
+
+#main_l input {
+    margin-top: 20px;
+    width: 242px;
+    height: 32px;
+    padding-left: 10px;
+    border: 1px solid #ddd;
+}
+
+#main_l #agree {
+    text-align: center;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #333;
+    margin: 0;
+    padding: 0;
+}
+
+#main_l #label1 {
+    width: 250px;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+#main_l #label1 a {
+    color: #333333;
+}
+
+#main_l #submit,
+#main_r #submit2,
+#main_l #submit3{
+    width: 140px;
+    height: 40px;
+    background: #e6212a;
+    color: #ffffff;
+    border: none;
+    font-size: 14px;
+    margin-left: 190px;
+    float: left;
+    border-radius: 5px;
+}
+
+#main_r #submit2 {
+    margin-left: 100px;
+}
+
+#main_l span {
+    color: coral;
+    font-size: 14px;
+}
+
+#main_r div {
+    float: left;
+    margin-left: 80px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    width: 423px;
+    height: 88x;
+}
+
+#main_r span {
+    font-size: 14px;
+    width: 200px;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 90px;
+    color: #666;
+}
+/*        register over     login start      */
+
+#h1{
+   width:450px;border-top:1px solid #ddd;margin:20px auto 0;
+}
+#main_l form{
+    overflow: hidden;
+}
+#div1{
+    overflow: hidden;position:relative;
+}
+#main_l #a1{
+     position: absolute;bottom:13px;right:160px;color:#ccc;font-size: 12px;
+}
+#main_r h2 {
+    font-size: 12px;
+    width: 400px;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    color: #666;
+}
+#main_r strong {
+    float: left;
+    margin-left: 80px;
+    padding-top: 15px;
+    width: 423px;
+    height: 88x;
+}
+#main_r #submit1{
+    width: 140px;
+    height: 40px;
+    background: #e6212a;
+    color: #ffffff;
+    border: none;
+    font-size: 14px;
+    margin-left: 60px;
+    margin-top:60px;
+    float: left;
+    border-radius: 5px;
+}

@@ -1,0 +1,279 @@
+@charset "gb2312";
+
+/* CSS COMMON */
+
+html,body{margin: auto;font-size:12px;color:#666;}
+
+div,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,table,th,td,span{margin:0;padding:0;}
+
+h1,h2,h3,h4,h5,h6,button,input,select,textarea{font-size:100%;}
+
+li{ list-style:none;}
+
+a{text-decoration:none;cursor:pointer}
+
+a:hover{text-decoration:none;}
+
+img{border:none;}
+
+.yd_db{width:100%;margin:0 auto;}
+
+.yd_db .logo_xl{width:100%;height:44px;background:url(../image/tou_pu.jpg) repeat-x;}
+
+.yd_db .logo_xl ul{width:1220px;margin:0 auto;}
+
+.yd_db .logo_xl ul li.yi{color:#fff;line-height:44px;float:left;line-height:44px;}
+
+.yd_db .logo_xl ul li.yi1{background:url(../image/tou_1.jpg) no-repeat left center;width:80px;min-height:30px;float:left;margin-left:20px;margin-top:5px;padding-left:35px;line-height:30px;}
+
+.yd_db .logo_xl ul li.yi2{background:url(../image/tou_2.jpg) no-repeat left center;width:80px;height:30px;float:left;margin-left:10px;margin-top:5px;padding-left:40px;line-height:30px;}
+
+.yd_db .logo_xl ul li.yi3{background:url(../image/an_gb.jpg) no-repeat left center;float:right;width:23px;height:23px;margin-top:8px;}
+
+.yd_logot{width:100%;text-align:center;background-color: #c9161a;}
+
+.yd_logot img{vertical-align:top;}
+
+/*头部*/
+
+.top{background:#f7f7f7;border-bottom:1px solid #ddd; height:30px;}
+
+.yd_top{width:1200px;height:30px;margin: auto;}
+
+.yd_top ul.le{float:left;}
+
+.yd_top ul.le li{float:left;line-height:30px;color:#333;}
+
+.yd_top ul.le li.lb{border-left:1px solid #dddddd;border-right:1px solid #dddddd;margin-right:10px;}
+
+.yd_top ul.le li a{color:#696969;padding-left:10px;}
+
+.yd_top ul.le li a:hover{color:#000;}
+
+.yd_top ul.le li span{color:#d70f0f;font-weight:bold;}
+
+.yd_top ul.ri{float:right;}
+
+.yd_top ul.ri p{width:30px;display:inline;color:#e6212a;}
+
+.yd_top ul.ri li{float:left;line-height:30px;color:#333;}
+
+.yd_top ul.ri li.bn{margin:0 6px;border:1px solid #ddd;width:93px;height:19px;margin-top:5px;line-height:19px;background:url(../image/shou_1.jpg) no-repeat 82px 6px;}
+
+.yd_top ul.ri li a{padding:0 7px;}
+
+.yd_top ul.ri li a:hover{color:#000;}
+
+.yd_top ul.ri li a.aa{background:url(../image/oauth_sinaweibo.png) no-repeat left 1px;padding-left:20px;color:#e6212a;}
+
+.yd_top ul.ri li a.ab{background:url(../image/oauth_qq.png) no-repeat left center;padding-left:20px;color:#e6212a;}
+
+.yd_top ul.ri li a.ac{background:url(../image/oauth_taobao.png) no-repeat left 1px;padding-left:20px;color:#e6212a;}
+
+.yd_top ul.ri li a.ad{background:url(../image/jiao_1.png) no-repeat right -1px;padding-right:15px;}
+
+.yd_top ul.ri li a.bn{margin-right:15px;}
+
+.yd_logot{width:1210px; margin:auto}
+
+.yd_logo{width:1200px; height:102px;margin-top:10px; text-align:center; margin:auto;}
+
+.yd_logo .ad{height:66px;margin-left:20px;margin-top:20px;float:left;}
+
+.yd_logo .sr{width:469px;height:45px;background:url(../image/sou_1.jpg) no-repeat;float:left;margin-top:25px;margin-left:40px; position:relative;}
+
+.yd_logo .sr input{width:350px;height:30px;border:none;background:none;}
+
+.yd_logo .sr a.btn{width:42px;height:36px;display:inline-block;margin-top:5px;line-height:36px;color:#fff; margin-left:20px;}
+
+.yd_logo .sr span{ width:auto; height:25px; display:block;color:#333;margin-top:5px; text-align:left; line-height:25px;}
+
+.yd_logo .sr span a{padding:0 8px;color:#696969;}
+
+.yd_logo .sr span a:hover{color:#000;}
+
+.yd_logo .qx{background:url(../image/sou_2.jpg) no-repeat;float:right;margin-top:30px;width:375px;height:43px;display:inline;}
+
+.yd_logo .qx span{width:56px;height:36px;line-height:38px;padding-left:15px;float:left;color:#fff;font-size:14px;}
+
+.yd_logo .qx ul.zi{width:265px;height:32px;float:left; margin-left:10px;}
+
+.yd_logo .qx ul.zi li{float:left;line-height:32px;padding-top:5px;}
+
+.yd_logo .qx ul.zi li a{border:1px solid #ddd;margin:0 3px; padding:2px 3px;}
+
+.yd_logo .qx ul.zi li a:hover{background-color:#9a0000;color:#fff;}
+
+.yd_nav{width:100%;height:40px;background:#e6212a;margin-top:10px;}
+
+.yd_nav ul{margin:0 auto;position:relative;z-index:10000;}
+
+.yd_nav ul li{float:left; height:40px;line-height:40px; padding:0 15px 0px 15px;}
+
+.yd_nav .nav_cat li:hover{background:#fc114a;}
+
+.yd_nav .bb{ width:100px;color:#ffc873;padding:0 5px; line-height:40px; float:left; position:relative; display: inline;}
+
+.yd_nav .bb a{color:#ffc873;padding:0 2px;}
+
+.yd_nav .bb a:hover{background:none;}
+
+/*.yd_nav ul  a{padding:0 18px;color:#fff;}*/
+
+.yd_nav ul .cat1{color:#fff}
+
+.yd_nav ul .cat2{color:#e6212a; width:60px;}
+
+.yd_nav ul a.cur li{display: inline-block;background:#fc114a;}
+
+
+/*.yd_nav ul  a:hover{background:#ff9200;display:inline-block;}*/
+
+.yd_nav ul li .tc{width:1000px;background:#fff;border:1px solid #ccc;border-top:none;position:absolute;top:39px;left:52px;display:none;padding:2px 0 10px;}
+
+.yd_nav ul li .tc dt{float:left;margin-left:20px;padding-right:10px;color:#e6212a;text-align:left;width:60px;}
+
+.yd_nav ul li .tc dd{float:left;padding:0 -6px;line-height:20px;padding-top:7px;margin-right:5px;}
+
+.yd_nav ul li .tc dd a{color:#333;padding:0 0;}
+
+.yd_nav ul li .tc dd a:hover{background:none;color:#ff9200}
+
+.yd_nav ul li .tc dd span{padding:0 3px;}
+
+/*尾部*/
+
+.yd_fottor{margin:0 auto;width:1260px;}
+
+.yd_sd .yk{float:left;}
+
+.yk .rm{float:left;color:#000;font-size:16px;background:url(../image/wei_h1.jpg) no-repeat left 10px;margin-left:10px;padding-left:15px;margin-bottom:7px;}
+
+.yk .rm span{color:#d0d0d0;font-size:12px;}
+
+.yk .yd_sd{width:1258px;height:143px;border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;border-top:2px solid #aaa;float:left;}
+
+.yk .yd_sd ul{width:313px;height:140px;border-right:1px solid #ccc;float:left;}
+
+.yd_sd ul.no{border-right:none;}
+
+.yd_sd ul li.yi{width:290px;height:69px;border-bottom:1px dashed #ccc;margin-left:10px;margin-right:25px;}
+
+.yd_sd ul li.yi .tu{width:18px;height:50px;float:left;margin-top:10px;margin-left:30px;}
+
+.yd_sd ul li.yi .zi{float:left;margin-top:10px;margin-left:30px;line-height:20px;}
+
+.yd_sd ul li.yi1{width:290px;}
+
+.yd_sd ul li.yi1 .tu1{width:48px;height:42px;float:left;margin-top:10px;margin-left:20px;}
+
+.yd_sd ul li.yi1 .zi1{float:left;margin-top:10px;margin-left:18px;line-height:20px;}
+
+.yd_lb{width:1000px;float:left;margin-top:50px;margin-left:40px;}
+
+.yd_lb dl{float:left;width:140px;padding:0 30px;}
+
+.yd_lb dt{color:#636363;padding-bottom:12px;font-size:14px;}
+
+.yd_lb dd{color:#989898;line-height:20px;}
+
+.yd_lb dd a{color:#666;}
+
+.yd_lb dd a:hover{color:blue;}
+
+.wx{width:116px;height:116px;float:left;margin-top:50px;}
+
+.ba{height:45px;border:1px solid #ccc;float:left;margin-top:30px;}
+
+.ba li{width:245px;height:45px;float:left;text-align:center;line-height:45px;font-size:14px;background:url(../image/wei_sh.jpg) no-repeat right center;}
+
+.ba li.ab{background:none;}
+
+.ba li a{color:#656565;}
+
+.ba li a.yi{background:url(../image/wei_y1.jpg) no-repeat left 7px;padding-left:45px;display:inline-block;}
+
+.ba li a.er{background:url(../image/wei_b1.jpg) no-repeat left 7px;padding-left:45px;display:inline-block;}
+
+.ba li a.san{background:url(../image/wei_p1.jpg) no-repeat left 7px;padding-left:45px;display:inline-block;}
+
+.ba li a.si{background:url(../image/wei_z2.jpg) no-repeat left 7px;padding-left:45px;display:inline-block;}
+
+.ba li a.wu{background:url(../image/wei_x1.jpg) no-repeat left 7px;padding-left:45px;display:inline-block;}
+
+.ba li a:hover{color:#e6212a;}
+
+.fottor_xia{width:1000px;margin:0 auto;}
+
+.xia{width:687px;height:48px;margin-top:50px;float:left;margin-left:100px;}
+
+.wen{float:left;margin-top:30px;text-align:center;width:1000px;line-height:25px;}
+
+.wen a.xx{color:#009900;}
+
+.wen a.xa{color:#0033cc;}
+
+.wen a.xd{color:#ff0000;}
+
+.wen a.bb{padding:0 8px;}
+
+.xia1{width:913px;height:76px;margin-top:5px;float:left;}
+
+.wen1{float:left;text-align:center;width:900px;}
+
+
+
+/*焦点图*/
+
+.focus{ position:absolute; width:100%; height:600px; background-color: #000; top:0px; z-index:-1;overflow: hidden;}  
+
+
+
+.focus .shadow .title{width: 260px; height: 65px;padding-left: 30px;padding-top: 20px;}
+
+.focus .shadow .title a{ text-decoration:none; color:#fff; font-size:14px; font-weight:bolder; overflow:hidden; }
+
+.focus .btn{ position:absolute; bottom:34px; left:510px; overflow:hidden; zoom:1;} 
+
+.focus .btn a{position:relative; display:inline; width:13px; height:13px; border-radius:7px; margin:0 5px;color:#B0B0B0;font:12px/15px "\5B8B\4F53"; text-decoration:none; text-align:center; outline:0; float:left; background:#D9D9D9; }  
+
+.focus .btn a:hover,.focus .btn a.current{  cursor:pointer;background:#fc114a;}  
+
+.focus .fPic{ position:absolute; left:0px; top:0px; }  
+
+.focus .D1fBt{ overflow:hidden; zoom:1;  height:16px; z-index:10;  }  
+
+.focus .shadow{ width:100%; position:absolute; bottom:0; left:0px; z-index:10; height:80px; line-height: 80px; background:rgba(0,0,0,0.6);    
+
+filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000')\9;  display:block;  text-align:left; }  
+
+.focus .shadow a{ text-decoration:none; color:#fff; font-size:20px; overflow:hidden; margin-left:10px; font-family: "\5FAE\8F6F\96C5\9ED1";}  
+
+.focus .fcon{ position:relative; width:100%; float:left;  display:none; background:#000  }  
+
+.focus .fcon img{ display:block; }  
+
+.focus .fbg{bottom:25px; right:40px; position:absolute; height:21px; text-align:center; z-index: 200; }  
+
+.focus .fbg div{margin:4px 200px 0 0;overflow:hidden;zoom:1;height:14px}    
+
+.focus .D1fBt a{position:relative; display:inline; width:12px; height:12px; border-radius:7px; margin:0 5px;color:#B0B0B0;font:12px/15px "\5B8B\4F53"; text-decoration:none; text-align:center; outline:0; float:left; background:#D9D9D9; }    
+
+.focus .D1fBt .current,.focus .D1fBt a:hover{background:#fc114a;}    
+
+.focus .D1fBt img{display:none}    
+
+.focus .D1fBt i{display:none; font-style:normal; }    
+
+.focus .prev,.focus .next{position:absolute;width:40px;height:74px;background: url(../image/focus_btn.png) no-repeat;}
+
+.focus .prev{top: 50%;margin-top: -37px; left: 0;background-position:0 -74px; cursor:pointer; }  
+
+.focus .next{top: 50%;margin-top: -37px; right: 0;  background-position:-40px -74px;  cursor:pointer;}  
+
+.focus .prev:hover{  background-position:0 0; }  
+
+.focus .next:hover{  background-position:-40px 0;}  
+
+
+

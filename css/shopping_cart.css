@@ -1,0 +1,152 @@
+/*  document css  */
+
+#div1,
+#main {
+    width: 1195px;
+    margin: 0 auto;
+    font-size: 12px;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+#div1 {
+    line-height: 40px;
+    padding: 0;
+}
+
+#div1 h2 {
+    float: left;
+}
+
+#div1 h2 a {
+    color: #646461;
+    font-weight: normal;
+}
+
+#div2 {
+    font-weight: bold;
+    color: #666;
+    padding-left: 5px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+
+/*    div1_2 over  */
+
+#table {
+    overflow: hidden;
+    width: 1205px;
+}
+
+#table table,
+#table td {
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 10px;
+    line-height: 24px;
+    vertical-align: middle;
+    color: #666;
+}
+
+#table table {
+    width: 1100px;
+    overflow: hidden;
+}
+
+#table td {
+    max-width: 300px;
+    min-width: 140px;
+}
+
+
+/*   shopping cart _message        */
+
+#table td img {
+    width: 100px;
+    height: 100px;
+}
+
+#table .tr:hover {
+    background: #eee;
+    border: 1px solid #ddd;
+}
+
+#table span {
+    color: #333;
+}
+
+#table .num div {
+    display: inline-block;
+    margin-left: 5px;
+    width: 20px;
+    height: 15px;
+    background: url(../img/update.png) no-repeat 0 0;
+    cursor: pointer;
+}
+
+#table .num input {
+    width: 15px;
+}
+
+#table .remove div {
+    width: 20px;
+    height: 20px;
+    background: url(../img/remove.png) no-repeat 0 0;cursor: pointer;
+}
+
+#div3 {
+    margin-top: 30px;
+    
+    width: 430px;
+    overflow: hidden;
+    float: right;
+    line-height: 24px;
+    font-weight: bold;
+    color: #666;
+}
+
+#div3 p {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+#div3 span {
+    float: left;
+}
+
+#div3 em {
+    float: left;margin-left: 240px;
+}
+
+
+/*#table #p_2{
+    float:right;width:430px;
+}*/
+
+#div4 {
+    width: 1100px;
+    float: left;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 66px;
+}
+
+#btn1,
+#btn2 {
+    width: 135px;
+    line-height: 36px;
+    border: 1px solid #aaa;
+}
+
+#btn1 {
+    float: left;
+    background: #dedede;
+    color: #333;
+}
+
+#btn2 {
+    float: right;
+    background: #c00403;
+    color: #ffffe6;
+}

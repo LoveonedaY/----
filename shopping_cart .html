@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>菲宝购物车</title>
+    <link rel="stylesheet" href="css/shopping_cart.css" type="text/css">
+    <link rel="stylesheet" href="css/top_bottom.css" type="text/css">
+    <script src='src/jquery-1.11.1.min.js'></script>
+    <script src='src/jquery.cookie.js'></script>
+    <script src="js/index.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/shop.js"></script>
+</head>
+
+<body>
+    <div id="topBox">
+        <div id="top">
+            <p>亲,欢迎光临菲宝乐购! <a href="#" name='top' id='web_phone'>手机web站</a></p>
+            <img src="img/phone_.png" alt="二维码" id='img_er'>
+            <ul>
+                <li class='li1'><a href="#">收藏本站</a></li>
+                <li id='li2' class='li1'><a href="#">帮助中心</a></li>
+                <li class='li1'><a href="#">会员中心</a></li>
+                <li class='li1' id='li_num'><a href="#" id='shop_cart'>购物车0件</a></li>
+                <li id='li1'><a href="#">去结算</a></li>
+                <li class='li1'><a href="#">【退出】</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--    top over       nav_top start     -->
+    <div id="nav_top">
+        <img src="img/2-log.png" alt="log" id='img1'>
+        <img src="img/3-nav.png" alt="pinzi" id='img2'>
+        <form action="#" id='form1'>
+            <input type="text" id="ipt1" placeholder="请输入关键字">
+            <input type="button" id='ipt2' value="搜索">
+        </form>
+
+        <ul id='ul1'>
+            <li><a href="#">女装</a></li>
+            <li><a href="#">男装</a></li>
+            <li><a href="#">美白</a></li>
+            <li><a href="#">补水</a></li>
+            <li><a href="#">数码</a></li>
+            <li><a href="#">包包</a></li>
+            <li><a href="#">母婴</a></li>
+        </ul>
+    </div>
+    <!--     nav_top  over       nav  start     -->
+    <div id="navBox">
+        <div id="nav">
+            <ul>
+                <li id='li3'>所有商品分类</li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">分销平台</a></li>
+                <li><a href="#">海外代购</a></li>
+                <li><a href="#">公共平台</a></li>
+                <li><a href="#">团购</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">竞拍</a></li>
+                <li><a href="#">充值</a></li>
+                <li><a href="#">电费</a></li>
+                <li><a href="#">水费</a></li>
+                <li><a href="#">成人用品</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--    nav over    main start      -->
+    <div id="main">
+        <div id="div1">
+            <h2><a href="index.html">&nbsp;首页 </a><a href="index.html"> &gt; 购物车内的商品</a></h2>
+        </div>
+        <div id='div2'>购物车内的商品</div>
+        <div id="table">
+            <table>
+                <tr>
+                    <td id="td1">图片</td>
+                    <td>品名</td>
+                    <td>数量</td>
+                    <td>单价</td>
+                    <td>总计</td>
+                    <td>操作</td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div id="div3">
+            <p><span>商品总额:</span><em id="em_1"></em></p>
+            <p><span>订单总额:</span><em id="em_2"></em></p>
+        </div>
+        <div id="div4">
+            <button id="btn1">&lt;&nbsp;继续购物</button>
+            <button id="btn2">去结账&nbsp;&gt;</button>
+        </div>
+    </div>
+    <!--   bottom  start     -->
+    <div id="bottom1">
+        <dl id="dl1">
+            <dt>购物指南</dt>
+            <dd>购物流程</dd>
+            <dd>购物咨询</dd>
+            <dd>常见问题</dd>
+        </dl>
+        <dl id="dl2">
+            <dt>会员服务</dt>
+            <dd>用户协议</dd>
+            <dd>积分说明</dd>
+            <dd>代金券</dd>
+            <dd>会员制度</dd>
+        </dl>
+        <dl id="dl3">
+            <dt>配送方式</dt>
+            <dd>配送时间</dd>
+            <dd>快递资费</dd>
+            <dd>签收须知</dd>
+            <dd>送货方式</dd>
+        </dl>
+        <dl id="dl4">
+            <dt>客户服务</dt>
+            <dd>快递查询</dd>
+            <dd>公司简介</dd>
+            <dd>联系我们</dd>
+            <dd>投诉建议</dd>
+        </dl>
+        <dl id="dl5">
+            <dt>售后服务</dt>
+            <dd>品质保证</dd>
+            <dd>退货政策</dd>
+            <dd>退货流程</dd>
+            <dd>办理退货</dd>
+        </dl>
+    </div>
+    <div id="bottom2">
+        <p id='p1'></p>
+        <p id="p2"></p>
+        <p id='p3'></p>
+        <p id="p4"></p>
+    </div>
+    <div id="bottom3">
+        <p>
+            <a href="#">公司简介</a>
+            <a href="#">成为供应商</a>
+            <a href="#">联系我们</a>
+            <a href="#">投诉建议</a>
+            <a href="#">帮助中心</a>
+            <a href="#">公司营业执照</a>
+            <a href="#" id="a1">快递查询</a>
+        </p>
+        <p id='p5'>
+            Copyright&copy; <b>菲宝乐购</b> 2015-2016 版权所有 鄂ICP备15004435号-1
+        </p>
+    </div>
+    <!--       share   start          -->
+    <div id="share">
+        <div>
+            <h1>分享到..</h1>
+            <h2>
+               <dl>
+                <dt><a href="#"><img src="img/share1.gif" alt="腾讯微博"></a></dt>
+                <dd>腾讯微博</dd>
+            </dl>
+            <dl>
+               <dt>
+                <a href="#"><img src="img/share2.gif" alt="一键通"></a></dt>
+                <dd>一键通</dd>
+            </dl>
+            <dl>
+               <dt>
+               <a href="#"><img src="img/share3.gif" alt="新浪微博"></a></dt>
+                <dd>新浪微博</dd>
+            </dl>
+            </h2>
+            <ul>
+                <li>
+                    <a href="#"><img src="img/share(1).jpg" alt=""><span>qq空间</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(2).jpg" alt=""><span>搜狐新闻</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(3).jpg" alt="">新华新闻</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(4).jpg" alt="">手机</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(5).jpg" alt="">网易微博</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(6).jpg" alt="">开心网</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(7).jpg" alt="">豆瓣网</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#"><img src="img/share(1).jpg" alt="">qq空间</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(2).jpg" alt="">搜狐新闻</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(3).jpg" alt="">新华新闻</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(4).jpg" alt="">手机</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(5).jpg" alt="">网易微博</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(6).jpg" alt="">开心网</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/share(7).jpg" alt="">豆瓣网</a>
+                </li>
+            </ul>
+            <h3><a href="#">more..</a></h3>
+        </div><span id='bar'>fen分享^_^</span>
+    </div>
+    <!--            /require answer         -->
+    <div id="require">
+        <span id="req_bar"><img src="img/req1.gif" alt="require"></span>
+        <h2>在线客服</h2>
+        <br>
+        <br><a href="#">***在线客服1***</a>
+        <br/><a href="#">***在线客服2***</a>
+        <br>
+        <br><img src="img/req3.gif" alt="require">
+    </div>
+    <!--   require over   left_bottom div start   -->
+    <div id="left_btm">
+        <ul>
+            <li id="li4"></li>
+            <p>快递</p>
+            <li id="li5"></li>
+            <p>天气</p>
+            <li id="li6"></li>
+            <p>iphone</p>
+            <li id="li7"></li>
+            <p id="p5">安卓</p>
+            <div id="android"><img src="img/left-Android.png" alt="left_android,扫一扫"></div>
+            <div id="ios"><img src="img/left-ios.png" alt="left_ios,扫一扫"></div>
+        </ul>
+    </div>
+    <!--    left_bottom  over       -->
+</body>
+<script>
+</script>
+
+</html>

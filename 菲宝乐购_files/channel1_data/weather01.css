@@ -1,0 +1,142 @@
+﻿@charset "utf-8";
+/*城市预报*/
+.city_fon{ width:960px; height:61px; color:#fff; position:relative; background:url(../images/nav1.png) no-repeat;}
+.city_fon span{ }
+.city_fon span{ display:inline-block;}
+.city_fon .city_name{ font-size:35px; font-family: "微软雅黑"; margin-top:7px; margin-left:16px;}
+.city_fon .cty1{ display:inline-block;}
+.city_fon .cty2{position: absolute;top: 16px;padding-left: 8px;}
+.city_fon .cty2 a{ color:#fff; list-style:none;}
+.city_fon .cty3{position: absolute;bottom: 10px;padding-left: 8px; }
+.city_fon .cty3 em{ }
+.city_fon .cty3 .temp1{ padding-left:2px;}
+.city_fon .cty3 .wet{ padding-left:2px;}
+.city_fon .cty3 .wet span{letter-spacing:-1px;}
+.city_fon .cty3 .wind{ padding-left: 2px;}
+.city_fon .cty3 .pm{ padding-left:5px;  font-family:"宋体";}
+.city_fon .cty3 .pm span{letter-spacing:-1px;}
+.city_fon .cty3 .worn{ padding-left:5px;}
+.city_fon .cty3 .worn a{ width:20px; height:20px; display:inline-block; background:url(../images/pind1_bg.png) no-repeat -127px 0; position:absolute; top:-3px;}
+.city_fon .cty3 .worn a:hover{ background-position:-153px 0;}
+.city_fon .cty3 .sk{ padding-left:2px;}
+.city_fon .share{ display:inline-block; position: absolute;left: 500px;top: 29px;}
+.city_fon .share h5{ display: inline-block;position: absolute;left: -49px;top: 5px; font-weight:normal; }
+.city_fon .share a{ display:inline-block; background:url(../images/pind1_bg.png) no-repeat; margin-left:5px;}
+.city_fon .share .xl{ width:25px; height:25px; background-position:-180px 0;}
+.city_fon .share .qq{ width:25px; height:25px; background-position:-249px 0;}
+.city_fon .share .peo{ width:34px; height:25px; background-position:-309px 0;}
+
+/*天气预报*/
+.wea_lif{ position:relative; }
+.weather,.life{ width:960px; height:490px; background:url(../images/pind1.jpg) no-repeat; color:#fff; margin-top:1px; position:relative;}
+.weather span{ font-family:"微软雅黑"; font-size:14px;}
+.weather .wth_top{ height:254px;}
+.weather .wth_top div{ display:inline-block;}
+.weather .w_top_l,.weather .w_top_r{ width:50%;}
+.weather .w_top_l{ float:left;}
+.weather .w_top_r{ float:right;}
+.weather .w_top_l .w_time{ margin-left:17px; margin-top:10px; }
+.weather .w_top_l .w_date{ font-size:24px; display:block;margin-left: 66px;margin-top: 11px;}
+.weather .w_top_l .w_del{ display: block; position:relative;}
+.weather .w_top_l .w_del .w_temp{ font-size: 97px;font-family: Arial;padding-left: 16px;float: left;margin-top: 19px;width: 142px;text-align: right;}
+.weather .w_top_l .w_del em{ font-size:44px; font-family:"微软雅黑";float:left; padding-top:15px;}
+.weather .w_top_l .w_del .w_left{ float:right;}
+.weather .w_top_l .w_del .w_fn{ font-size:24px;font-family:"微软雅黑"; float: left;margin-top: 82px;margin-left: 7px; width:96px;}
+.weather .w_top_l  .w_gk{ font-size:18px; font-family:"微软雅黑"; padding-left:66px;  margin-top:-3px;width: 400px;}
+.weather .w_top_l  .w_gk span{ font-size:18px;}
+.weather .w_top_l  .w_gk .w_wind{ padding-left:11px;}
+.weather .w_top_r .w_date{font-size:24px; display:block;margin-left: 73px;margin-top: 41px;}
+.weather .w_top_r .w_del{ display: block; position:relative;}
+.weather .w_top_r .w_del .w_temp{ font-size: 97px;font-family: Arial;padding-left: 18px;float: left;margin-top: 20px;width: 142px;text-align: right;}
+.weather .w_top_r .w_del em{ font-size:44px; font-family:"微软雅黑"; float:left; padding-top:16px;}
+.weather .w_top_r .w_del .w_left{ float:right;}
+.weather .w_top_r .w_del .w_fn{ font-size:24px;font-family:"微软雅黑"; float: left;margin-top: 83px; padding-left:14px;  width:96px;}
+.weather .w_top_r .w_gk{ font-size:18px; font-family:"微软雅黑"; padding-left:74px; margin-top:-4px;width: 400px;}
+.weather .w_top_r .w_gk span{ font-size:18px;}
+.weather .w_top_r .w_gk .w_wind{ padding-left:10px;}
+.big{  display: inline-block;width:120px; height:120px;float:left;}
+.act{ position:absolute; top:10px; right:20px;}
+.act span{ width:28px; height:20px; display:inline-block; text-align:center;  margin-left:2px; background:#000; opacity:0.3; filter:alpha(opacity:30); color:#fff; cursor:pointer;}
+.act span.now{ opacity:0.7; filter:alpha(opacity:70);}
+
+/********生活指数**************/
+.life .tab{ width:470px; height:45px; padding-top:16px; margin-left:16px;}
+.life .tab div{ width:92px; height:45px; float:left; margin-right:1px; font-size:18px; display:inline-block;  font-family: "微软雅黑"; text-align:center; line-height:44px; position:relative;}
+.life .tab div p{width:92px; height:45px; display:inline-block;background:#000; opacity:0.3; filter:alpha(opacity:30);}
+.life .tab div span{position: absolute;top: 0;text-align: center;left: 28px;}
+.life .tab div em{ position:absolute; top:0;  font-family: "微软雅黑"; font-size:18px;}
+.life .tab div .ten{ left:12px;}
+.life .tab div .month{ left:25px;}
+.life .tab div .sigle{ left:42px;}
+.life .tab div .date{ left:64px;}
+.life .tab div.now p{ opacity:0.5; filter:alpha(opacity:50);}
+.life .tab div span{ font-size:18px; font-family:"微软雅黑";}
+.life .lif_cont{ margin-left:16px; display:inline-block; position:absolute; left:0; top:0; height:411px;_overflow-y: scroll;_width: 100%;}
+.life .lif_cont .numb_01{  background:url(../images/pind1_bg.png) no-repeat -312px -32px; display:inline-block; width:61px; height:63px; opacity:0.5; filter:alpha(opacity:50);}
+.life .lif_cont .numb_01 img{ margin-left:7px; margin-top:7px;}
+.life .lif_cont .div{ display:inline-block; width:400px;_width: 382px;_height: 75px; margin-left:23px; margin-top:29px; margin-bottom:6px; float:left; margin-right:16px; position:relative;}
+.life .lif_cont div img{ position:absolute; left:8px; top:9px;}
+.life .life_del{ display:inline-block; margin-left:16px; width:928px;}
+.life .life_del .null{ display:block; display:inline-block;width:928px; height:411px; background:#000; opacity:0.5; filter:alpha(opacity:50);}
+.life .lif_cont div p{ display:inline-block; float:left; line-height:20px; font-size:14px;}
+.life .lif_cont div p span{ font-size:14px;}
+.life .lif_cont .dal{ display:block; width:338px;_width: 310px; float:left; line-height:18px; margin-left: 75px;margin-top: -42px;}
+.life .lif_cont .lif_p{ margin-left:14px;}
+.life .scroll{ position:absolute; right:18px; top:10px;}
+
+.bg_li{  background:url(../images/pind1_bg.png) no-repeat; display:block; width:2px; height:411px; position: absolute;top: 50px;left: 50%;}
+.bg_01{ background-position:-389px 0;}
+.bg_02{background-position:-395px 0;}
+/*********天气预报********/
+.wth-bottom{ width:927px; height:221px; display:block; margin:0 18px;}
+.wth-bottom p{ display:inline-block; padding-left:15px; padding-top:15px;}
+.wth-bottom .for_cast{background:#333; width:231px; display:inline-block; height:221px; opacity:0.7; filter:alpha(opacity:70);}
+.wth-bottom .mod{ background:#333; filter:alpha(opacity:70); opacity:0.7; display:inline-block; width:230px; height:221px; float:left; margin-left:1px;}
+.wth-bottom .mod h4{ padding-left:26px; padding-top:21px; font-size:14px; font-family:"微软雅黑"; font-size:17px; font-weight: normal;}
+.wth-bottom .mod h4 span{font-size:16px;}
+.wth-bottom .mod .sp1{width:50px; height:50px; display:inline-block; margin-top:11px; margin-left:-3px; margin-bottom:5px;}
+.wth-bottom .mod .mod_01{ width:112px; display:inline-block; float:left; text-align:center; margin-top:6px;}
+.wth-bottom .mod .mod_02{ width:118px; display:inline-block; float:right;text-align:center; margin-top:6px;}
+.mod_01 span,.mod_02 span{ display:block; width:110px; line-height:24px;}
+.wth-bottom .mod .sp2{  line-height:19px; font-size:13px; font-family:"宋体";}
+.wth-bottom .mod .sp3{ line-height:23px; font-size:13px; font-family:"宋体"; margin-left:-2px;}
+
+/*********标签********/
+.tabNa{ position:absolute; right:15px; top:158px;_top:160px; }
+.tabNa div{ position:relative; float:left;}
+.com{ background:url(../images/pind1_bg.png) no-repeat -1px -35px; width:129px; height:45px; display:inline-block; opacity:0.7; filter:alpha(opacity:70);}
+.tabNa .wea{font-size:18px; font-family: "微软雅黑"; text-align:center;  line-height:47px;display:inline-block; position:absolute; left:27px; color:#fff; top:2px;}
+.tabNa div .now{opacity:1; filter:alpha(opacity:100); color:#265a9c;}
+
+
+/****************IE7、IE6*********************/
+.city_fon .cty3 span{ *margin-right:3px;}
+.city_fon .cty3 .worn{*padding-left:6px;}
+.hot_cty .hot_r .ys_li1 p{ *margin-top:-85px;}
+.hot_cty .hot_r .ys_li2 .p{*margin-top:14px; *padding-top:0;}
+.hot_r .ys_li1 span{ *float:right; *margin-top:-14px; *text-align:left;}
+.hot_cty .hot_r .year{ *margin-left:87px;}
+.hot_cty .hot_r span.year{ *margin-right:87px;_margin-right:62px; *padding-left:1px; }
+.hot_cty .hot_r span.time{ *margin-right:61px; *padding-left:1px;}
+.hot_r .ys_li2 span{ *margin-top:-18px; *float:right;*text-align:left;}
+.adm_l2{ *margin-top:-20px;}
+.con_list ul .eng{*margin-left:-2px; *display:inline;}
+.con_list ul{ *height:227px;}
+.search .con_list ul li p:first-letter,.str_search .con_list  ul li p:first-letter{ *color:#ff6400;_color:#ff6400;}
+.search .con_list ul .select p:first-letter,.str_search .con_list  ul .select p:first-letter{*color:#ff6400; _color:#ff6400;}
+.con_list .rig{*margin-left:2px;}
+.stro .str_nav a{*margin-top:-24px;}
+.layer{ *position:absolute;}
+.cty_del{_margin-left:2px; _width:190px;}
+.cty_del .temp em{ font-family: "微软雅黑";}
+.life .lif_cont .dal{_margin-left:38px;}
+.life .lif_cont div{_margin-left:13px;}
+.w_l,.w_r{ }
+.wea_lif{_position:relative; } 
+.scroll .bar .up,.scroll .bar .down{_display:none;}
+.search .last_sear{ _top:20px;}
+.stro{ _left:350px;}
+.city_fon .city_name{_marigin-top:12px;}
+.weather .w_top_r .w_del .w_temp,.weather .w_top_l .w_del .w_temp{ *width:131px;}
+.weather .w_del .w_fn{ *margin-right:20px;}
+.cty_del img{_right:32px;}

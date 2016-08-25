@@ -1,0 +1,533 @@
+/*css document*/
+
+body {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+#main_l {
+    float: left;
+    width: 216px;
+}
+
+#div1,
+#main {
+    width: 1205px;
+    margin: 0 auto;
+    font-size: 12px;
+    overflow: hidden;
+    color: #666;
+}
+
+#div1 {
+    line-height: 40px;
+}
+
+#div1 h1 {
+    color: #cbcbca;
+    float: left;
+    font-weight: normal;
+}
+
+#div1 h2 {
+    float: left;
+}
+
+#div1 h2 a {
+    color: #646461;
+    font-weight: normal;
+}
+
+
+/*    div1 over  div2 start*/
+
+#div2 {
+    width: 214px;
+    border: 1px solid #dcdcdc;
+}
+
+#div2 .h2_1 span {
+    background: red;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+#div2 .h2_1 {
+    background: url(../img/main_l1.jpg) no-repeat 36px center;
+    height: 54px;
+    font-size: 0;
+}
+
+#div2 h1 {
+    color: #e61d23;
+    line-height: 40px;
+    border-bottom: 1px dashed #dcdcdc;
+    text-align: left;
+    font-size: 16px;
+    padding-left: 5px;
+    font-weight: normal;
+}
+
+#div2 h2,
+#div3 h2 {
+    padding: 10px 5px;
+    border-bottom: 1px dashed #dcdcdc;
+    overflow: hidden;
+}
+
+#div2 h2 span {
+    float: left;
+    display: inline;
+    width: 16px;
+    line-height: 16px;
+    background: red;
+    text-align: center;
+    margin: 0 5px;
+    padding: 0;
+}
+
+#div2 img {
+    float: left;
+    padding-left: 5px;
+}
+
+#div2 h2 strong,
+#div3 h2 strong {
+    font-weight: normal;
+    color: #30302c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 108px;
+    line-height: 20px;
+}
+
+#div3 h2 strong {
+    float: right;
+    padding-right: 15px;
+}
+
+#div2 i,
+#div3 i {
+    font-style: normal;
+    color: red;
+    padding-left: 5px;
+}
+
+#div3 i {
+    display: block;
+    padding-top: 25px;
+}
+
+#div2 h2 span {
+    background: yellow;
+}
+
+#div3 {
+    width: 214px;
+    border: 1px solid #dcdcdc;
+    margin-top: 10px;
+}
+
+#div3 h2 {
+    border-bottom: 1px dashed #dcdcdc;
+}
+
+#div3 h2 img {
+    width: 60px;
+    height: 60px;
+}
+
+#div3 p {
+    background: #faf6f5;
+    padding: 10px 5px;
+    border-bottom: 1px dashed #dcdcdc;
+    overflow: hidden;
+}
+
+#div3 a {
+    float: right;
+}
+
+
+/*     mian_left  over         main_right   start     */
+
+#main_r {
+    width: 900px;
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+#box {
+    width: 410px;
+    height: 500px;
+    margin-top: 40px;
+    float: left;
+}
+
+#box ul {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 9px;
+}
+
+#box li {
+    float: left;
+    width: 58px;
+    height: 58px;
+    border: 1px solid #dcdcdc;
+    margin: 5px;
+}
+
+#box li img {
+    width: 100%;
+    height: 100%;
+}
+
+#bigpic {
+    width: 410px;
+    height: 410px;
+    border: 1px solid #dcdcdc;
+    cursor: move;
+}
+
+#ul2 li {
+    border: 1px solid #dcdcdc;
+}
+
+#ul2 {
+    padding-left: 18px;
+}
+
+#ul2 #li8,
+#ul2 #li9 {
+    width: 15px;
+    height: 70px;
+    background: url(../img/magni_btn.png) no-repeat;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+#ul2 #li8 {
+    background-position: 0 0;
+}
+
+#ul2 #li9 {
+    background-position: 0 -140px;
+}
+
+
+/*    main_r_right start  */
+
+#box_r {
+    margin-top: 40px;
+    margin-left: 10px;
+    float: right;
+    width: 470px;
+    overflow: hidden;
+}
+
+#box_r span {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0;
+}
+
+#box_r h1 {
+    padding: 5px;
+    color: #a89999;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 450px;
+}
+
+#div4 {
+    width: 460px;
+    padding: 10px 5px;
+    overflow: hidden;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+#div4 h2 {
+    width: 215px;
+    float: left;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+#div5 {
+    width: 450px;
+    font-size: 12px;
+    padding: 10px 10px 15px;
+    float: left;
+    overflow: hidden;
+    background: #f8f8f8;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+#div5 ul {
+    overflow: hidden;
+    padding-top: 5px;
+}
+
+#div5 h1 {
+    width: 75px;
+    padding: 10px 0 10px 10px;
+    height: 120px;
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#div5 .li1 {
+    width: 80px;
+    float: left;
+    border: 0;
+    padding: 10px 0;margin-left: 5px;font-weight: normal;
+    background: #f8f8f8;
+}
+
+#div5 li,
+#div5 #li10 {
+    cursor: pointer;
+    float: left;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    background: #fff;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+#ul_1 li:hover {
+    color: red;
+    border: 1px solid red;
+}
+
+#ul_2 li:hover {
+    color: red;
+    border: 1px solid red;
+}
+
+#div5 #li10 {
+    width: 20px;
+    text-align: center;
+}
+
+#div5 div {
+    width: 135px;
+    height: 38px;
+    border-radius: 5px;
+    float: left;
+    display: inline;
+    margin-top: 30px;
+}
+
+#btn1 {
+    background: url(../img/magni_buy.gif) no-repeat center center;
+    margin-left: 85px;
+}
+
+#btn2 {
+    background: url(../img/magni_shop.gif) no-repeat center center;
+    margin-left: 18px;
+}
+
+#div5 #btn3 {
+    width: 68px;
+    height: 38px;
+    background: url(../img/magni_collect.png) no-repeat center center;
+    margin-left: 5px;
+}
+
+
+/*     next  is  the  more  messages  */
+
+#main_tab {
+    overflow: hidden;
+    float: left;
+    border-left: 1px solid #dcdcdc;
+}
+
+#main_tab ul {
+    width: 800px;
+    overflow: hidden;
+    background: #f8f8f8;
+}
+
+#main_tab li {
+    cursor: pointer;
+    float: left;
+    width: 90px;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+    background: #f8f8f8;
+    line-height: 30px;
+    border-left: none;
+}
+
+#main_tab .li3:hover {
+    border-top: 3px solid #e6212a;
+    border-bottom: none;
+    background: #fff;
+    color: #e6212a;
+}
+
+#main_tab #li_0 {
+    width: 435px;
+    height: 30px;
+}
+
+#message {
+    float: left;
+    width: 800px;
+    padding-bottom: 10px;
+}
+
+#message #ul4,
+#message #ul5 {
+    padding-left: 20px;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#message #ul4 li {
+    padding: 5px 0;
+    line-height: 24px;
+    width: 260px;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#message img {
+    float: left;
+}
+
+#message #ul5 {
+    padding: 0;
+    margin-top: 20px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+#message #ul5 li {
+    float: left;
+    width: 180px;
+    border-top: 1px solid #dcdcdc;
+    line-height: 37px;
+    padding-left: 10px;
+}
+
+#message #ul4,
+#message #ul5,
+#message #ul6,
+#message #ul7 {
+    display: none;
+}
+
+#message #ul6 {
+    line-height: 46px;
+    border-bottom: 1px solid #dcdcdc;
+    color: #999;
+}
+
+#message #ul6 p {
+    padding-left: 10px;
+}
+
+#message #ul7 li {
+    width: 700px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#message #ul7 p {
+    width: 748px;
+    line-height: 30px;
+    border: 1px solid #dcdcdc;
+    background: #f8f8f8;
+    margin-top: 5px;
+    padding-left: 30px;
+    color: #333;
+}
+
+#message #ul7 label {
+    float: left;
+    line-height: 24px;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+#message #name,
+#message #textarea1 {
+    border: 1px solid #dcdcdc;
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+    display: inline;
+    padding-left: 10px;
+    line-height: 24px;
+    padding-top: 5px;
+}
+
+#message #name {
+    width: 121px;
+    height: 23px;
+    line-height: 23px;
+}
+
+#message #li12 span {
+    float: left;
+    font-weight: bold;
+    color: #333;
+    line-height: 20px;
+    margin-top: 10px;
+    padding: 0 5px 0 10px;
+}
+
+#message #li12 li {
+    float: left;
+    width: 20px;
+    height: 18px;
+    background: url(../img/score.png) no-repeat 0 0;
+    float: left;
+    line-height: 18px;
+    margin-top: 10px;
+    padding: 1px;
+}
+
+#message #li12 div {
+    float: left;
+    line-height: 20px;
+    color: #ecf507;
+}
+
+#message #btn4 {
+    margin-left: 20px;
+    width: 80px;
+    height: 37px;
+    color: #fff;
+    background: #e6212a;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 37px;
+}
+
+
+/*
+#message #li12 li:hover {
+    background: url(../img/score.png) no-repeat 0 -29px;
+}*/

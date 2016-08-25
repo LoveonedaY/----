@@ -1,0 +1,1282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	天气频道
+</title>
+    <link href="channel1_data/common.css" type="text/css" rel="stylesheet" rev="stylesheet">
+    <link href="channel1_data/weather01.css" type="text/css" rel="stylesheet" rev="stylesheet">
+    <link href="channel1_data/jquery.css" rel="stylesheet">
+    <script src="channel1_data/achm_002" async="" type="text/javascript"></script><script src="channel1_data/achm" async="" type="text/javascript"></script><script type="text/javascript" src="channel1_data/jquery-1.js"></script>
+    <script type="text/javascript" src="channel1_data/jquery_002.js"></script>
+    <script type="text/javascript" src="channel1_data/channel.js"></script>
+    <script type="text/javascript" src="channel1_data/jquery_003.js"></script>
+    <script type="text/javascript" src="channel1_data/jquery.js"></script>
+    <!--[if IE 6]>
+    <script src="http://static.js.weather.com.cn/home/DD_belatedPNG_0.0.8a.js"></script>
+    <script>
+	    DD_belatedPNG.fix("*");
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+
+        $.cookie('cityid', "101010100");
+        $.cookie('defaultcityid', "101010100", { expires: 365 });
+        $("#spcity_name").text('北京');
+        var imgpath = 'http://static.css.weather.com.cn/home/images/';
+        $(document).ready(function () {
+            window.GetLastCity($.cookie('cityid'), '北京');
+        });
+        var isCelsius = true;
+        function isIe6() {
+            if ($.browser.msie && ($.browser.version == "6.0") && !$.support.style) {
+                return true;
+            }
+            return false;
+        }
+    </script>
+<script id="banner|105|{divId:'201501141139260',requestUrl:'http://cfps.cw.china-netwave.com/Banner.ashx?a=1'}" src="channel1_data/Main.js" type="text/javascript"></script><script src="channel1_data/Banner_002.js" type="text/javascript"></script></head>
+<body><div style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;" id="BAIDU_DUP_fp_wrapper"><iframe style="width: 0px; height: 0px; visibility: hidden; display: none;" src="channel1_data/o.htm" id="BAIDU_DUP_fp_iframe"></iframe></div>
+    <form method="post" action="./channel1.aspx?gid=5401a5350a31f90554522a2f" id="form1">
+<div class="aspNetHidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJLTU5MDkyNzk0ZGRt1Lh865JYp5NF3T2NXbDuZh3ccw9G3zgkcHd9AYaVNA==" type="hidden">
+</div>
+
+<div class="aspNetHidden">
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9AE7F429" type="hidden">
+</div>
+    
+<!--弹出层-->
+<!--添加城市弹出框---->
+<div id="add-citybox">
+    <div class="box-bg">
+    </div>
+    <div class="citybox-c">
+        <div class="citybox-tit clear">
+            <p>添加城市</p>
+            <div class="box-right">
+                <span id="close3"></span>
+            </div>
+        </div>
+        <div class="c-b-bg">
+        </div>
+        <div class="c-b-cent">
+            <div class="b-cent-t">
+                
+                <input id="txtAddCity" class="b-c-c" value="输入城市名称、首字母、全拼均可" citynum="" type="text">
+                
+            </div>
+            <div id="city-botns" class="clear">
+                <span class="add-botn"></span><span class="cancel-botn"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="citybox">
+    <!--推荐城市名列表-->
+    <div id="recom-city">
+        <div class="recom-c-bg">
+        </div>
+        <div class="r-cont">
+            <ul class="c-tab clear">
+                <li class="active"><em class="t2">热门</em><span></span></li>
+                <li><strong class="ctxt">A-G</strong><span></span></li>
+                <li><strong class="ctxt">H-L</strong><span></span></li>
+                <li><strong class="ctxt">M-T</strong><span></span></li>
+                <li><strong class="ctxt">W-Z</strong><span></span></li>
+            </ul>
+            <!--热门城市-->
+            <div class="list-c" style="display: block;">
+                <ul class="clear">
+                    <li><a href="javascript:;" citynum="101010100">北京</a> <a href="javascript:;" citynum="101020100">上海</a> <a href="javascript:;" citynum="101290101">昆明</a> <a href="javascript:;" citynum="101210101">杭州</a> <a href="javascript:;" citynum="101280101">广州</a> </li>
+                    <li><a href="javascript:;" citynum="101231001">钓鱼岛</a> <a href="javascript:;" class="three-text" citynum="101110101">西安</a> <a href="javascript:;" citynum="101190101">南京</a> <a href="javascript:;" citynum="101280601">深圳</a> <a href="javascript:;" citynum="101040100">重庆</a> </li>
+                    <li><a href="javascript:;" citynum="101250101">长沙</a> <a href="javascript:;" citynum="101070101">沈阳</a> <a href="javascript:;" citynum="101230201">厦门</a> <a href="javascript:;" citynum="101200101">武汉</a> <a href="javascript:;" citynum="101310101">海口</a> </li>
+                    <li><a href="javascript:;" citynum="101130101">乌鲁木齐</a> <a href="javascript:;" class="four-text" citynum="101270101">成都</a> <a href="javascript:;" citynum="101070201">大连</a> <a href="javascript:;" citynum="101050101">哈尔滨</a> <a href="javascript:;" class="three-text" citynum="101310201">三亚</a> </li>
+                    <li><a href="javascript:;" citynum="101060101">长春</a> <a href="javascript:;" citynum="101300101">南宁</a> <a href="javascript:;" citynum="101260101">贵阳</a> <a href="javascript:;" citynum="101230101">福州</a> <a href="javascript:;" citynum="101180101">郑州</a> </li>
+                    <li><a href="javascript:;" citynum="101120101">济南</a> <a href="javascript:;" citynum="101300501">桂林</a> <a href="javascript:;" citynum="101030100">天津</a> <a href="javascript:;" citynum="101100101">太原</a> <a href="javascript:;" citynum="101240101">南昌</a> </li>
+                    <li><a href="javascript:;" citynum="101140101">拉萨</a> <a href="javascript:;" citynum="101150101">西宁</a> <a href="javascript:;" citynum="101320101">香港</a> <a href="javascript:;" citynum="101330101">澳门</a> <a href="javascript:;" citynum="101340101">台北</a> </li>
+                </ul>
+            </div>
+            <!--A-G-->
+            <div class="list-c">
+                <ul class="clear">
+                    <li><a href="javascript:;" citynum="101220601">安庆</a> <a href="javascript:;" citynum="101131401">阿勒泰</a> <a href="javascript:;" class="three-text" citynum="101110701">安康</a> <a href="javascript:;" citynum="101130801">阿克苏</a> <a href="javascript:;" class="three-text" citynum="101060901">白山</a> </li>
+                    <li><a href="javascript:;" citynum="101080201">包头</a> <a href="javascript:;" citynum="101301301">北海</a> <a href="javascript:;" citynum="101010100">北京</a> <a href="javascript:;" citynum="101301001">百色</a> <a href="javascript:;" citynum="101290501">保山</a> </li>
+                    <li><a href="javascript:;" citynum="101100501">长治</a> <a href="javascript:;" citynum="101060101">长春</a> <a href="javascript:;" citynum="101191101">常州</a> <a href="javascript:;" citynum="101140501">昌都</a> <a href="javascript:;" citynum="101071201">朝阳</a> </li>
+                    <li><a href="javascript:;" citynum="101250601">常德</a> <a href="javascript:;" citynum="101270101">成都</a> <a href="javascript:;" citynum="101040100">重庆</a> <a href="javascript:;" citynum="101250101">长沙</a> <a href="javascript:;" citynum="101080601">赤峰</a> </li>
+                    <li><a href="javascript:;" citynum="101100201">大同</a> <a href="javascript:;" citynum="101070201">大连</a> <a href="javascript:;" citynum="101121201">东营</a> <a href="javascript:;" citynum="101050901">大庆</a> <a href="javascript:;" citynum="101070601">丹东</a> </li>
+                    <li><a href="javascript:;" citynum="101290201">大理</a> <a href="javascript:;" citynum="101160808">敦煌</a> <a href="javascript:;" citynum="101080701">鄂尔多斯</a> <a href="javascript:;" class="four-text" citynum="101201001">恩施</a> <a href="javascript:;" citynum="101230101">福州</a> </li>
+                    <li><a href="javascript:;" citynum="101220801">阜阳</a> <a href="javascript:;" citynum="101260101">贵阳</a> <a href="javascript:;" citynum="101300501">桂林</a> <a href="javascript:;" citynum="101280101">广州</a> <a href="javascript:;" citynum="101272101">广元</a> </li>
+                </ul>
+            </div>
+            <!--H-L-->
+            <div class="list-c">
+                <ul class="clear">
+                    <li><a href="javascript:;" citynum="101080101">呼和浩特</a> <a href="javascript:;" class="four-text" citynum="101131201">哈密</a> <a href="javascript:;" citynum="101050601">黑河</a> <a href="javascript:;" citynum="101081001">海拉尔</a> <a href="javascript:;" class="three-text" citynum="101050101">哈尔滨</a> </li>
+                    <li><a href="javascript:;" citynum="101310101">海口</a> <a href="javascript:;" citynum="101221001">黄山</a> <a href="javascript:;" citynum="101210101">杭州</a> <a href="javascript:;" citynum="101091001">邯郸</a> <a href="javascript:;" citynum="101220101">合肥</a> </li>
+                    <li><a href="javascript:;" citynum="101110311">黄龙</a> <a href="javascript:;" citynum="101110801">汉中</a> <a href="javascript:;" citynum="101131301">和田</a> <a href="javascript:;" citynum="101230509">晋江</a> <a href="javascript:;" citynum="101070701">锦州</a> </li>
+                    <li><a href="javascript:;" citynum="101240801">景德镇</a> <a href="javascript:;" citynum="101161401" class="three-text">嘉峪关</a> <a href="javascript:;" citynum="101240608" class="three-text">井冈山</a> <a href="javascript:;" citynum="101120701" class="three-text">济宁</a> <a href="javascript:;" citynum="101240201">九江</a> </li>
+                    <li><a href="javascript:;" citynum="101050401">佳木斯</a> <a href="javascript:;" citynum="101120101" class="three-text">济南</a> <a href="javascript:;" citynum="101130901">喀什</a> <a href="javascript:;" citynum="101290101">昆明</a> <a href="javascript:;" citynum="101271802">康定</a> </li>
+                    <li><a href="javascript:;" citynum="101130201">克拉玛依</a> <a href="javascript:;" citynum="101130601" class="four-text">库尔勒</a> <a href="javascript:;" citynum="101130807" class="three-text">库车</a> <a href="javascript:;" citynum="101160101">兰州</a> <a href="javascript:;" citynum="101180901">洛阳</a> </li>
+                    <li><a href="javascript:;" citynum="101291401">丽江</a> <a href="javascript:;" citynum="101300301">柳州</a> <a href="javascript:;" citynum="101271001">泸州</a> <a href="javascript:;" citynum="101191001">连云港</a> <a href="javascript:;" citynum="101140101" class="three-text">拉萨</a> </li>
+                </ul>
+            </div>
+            <!--M-T-->
+            <div class="list-c">
+                <ul class="clear">
+                    <li><a href="javascript:;" citynum="101050301">牡丹江</a> <a href="javascript:;" citynum="101081010" class="three-text">满洲里</a> <a href="javascript:;" citynum="101270401" class="three-text">绵阳</a> <a href="javascript:;" citynum="101280409">梅县</a> <a href="javascript:;" citynum="101050703">漠河</a> </li>
+                    <li><a href="javascript:;" citynum="101190101">南京</a> <a href="javascript:;" citynum="101270501">南充</a> <a href="javascript:;" citynum="101300101">南宁</a> <a href="javascript:;" citynum="101180701">南阳</a> <a href="javascript:;" citynum="101190501">南通</a> </li>
+                    <li><a href="javascript:;" citynum="101240101">南昌</a> <a href="javascript:;" citynum="101210401">宁波</a> <a href="javascript:;" citynum="101270201">攀枝花</a> <a href="javascript:;" citynum="101211001" class="three-text">衢州</a> <a href="javascript:;" citynum="101091101">秦皇岛</a> </li>
+                    <li><a href="javascript:;" citynum="101160401">庆阳</a> <a href="javascript:;" citynum="101130605">且末</a> <a href="javascript:;" citynum="101050201">齐齐哈尔</a> <a href="javascript:;" citynum="101120201" class="four-text">青岛</a> <a href="javascript:;" citynum="101280501">汕头</a> </li>
+                    <li><a href="javascript:;" citynum="101280601">深圳</a> <a href="javascript:;" citynum="101090101">石家庄</a> <a href="javascript:;" citynum="101310201" class="three-text">三亚</a> <a href="javascript:;" citynum="101070101">沈阳</a> <a href="javascript:;" citynum="101020100">上海</a> </li>
+                    <li><a href="javascript:;" citynum="101260601">铜仁</a> <a href="javascript:;" citynum="101131101">塔城</a> <a href="javascript:;" citynum="101290506">腾冲</a> <a href="javascript:;" citynum="101210601">台州</a> <a href="javascript:;" citynum="101160901">天水</a> </li>
+                    <li><a href="javascript:;" citynum="101030100">天津</a> <a href="javascript:;" citynum="101080501">通辽</a> <a href="javascript:;" citynum="101120801">泰安</a> <a href="javascript:;" citynum="101100101">太原</a> <a href="javascript:;" citynum="101090501">唐山</a> </li>
+                </ul>
+            </div>
+            <!--W-Z-->
+            <div class="list-c">
+                <ul class="clear">
+                    <li><a href="javascript:;" citynum="101121301">威海</a> <a href="javascript:;" citynum="101200101">武汉</a> <a href="javascript:;" citynum="101300601">梧州</a> <a href="javascript:;" citynum="101290601">文山</a> <a href="javascript:;" citynum="101190201">无锡</a> </li>
+                    <li><a href="javascript:;" citynum="101120601">潍坊</a> <a href="javascript:;" citynum="101230905">武夷山</a> <a href="javascript:;" citynum="101081101" class="three-text">乌兰浩特</a> <a href="javascript:;" citynum="101130101" class="four-text">乌鲁木齐</a> <a href="javascript:;" citynum="101210701" class="four-text">温州</a> </li>
+                    <li><a href="javascript:;" citynum="101041300">万州</a> <a href="javascript:;" citynum="101080301">乌海</a> <a href="javascript:;" citynum="101260901">兴义</a> <a href="javascript:;" citynum="101271610">西昌</a> <a href="javascript:;" citynum="101230201">厦门</a> </li>
+                    <li><a href="javascript:;" citynum="101291301">香格里拉</a> <a href="javascript:;" citynum="101110101" class="four-text">西安</a> <a href="javascript:;" citynum="">襄樊</a> <a href="javascript:;" citynum="101080901">锡林浩特</a> <a href="javascript:;" citynum="101150101" class="four-text">西宁</a> </li>
+                    <li><a href="javascript:;" citynum="101190801">徐州</a> <a href="javascript:;" citynum="101210904">义乌</a> <a href="javascript:;" citynum="101251401">永州</a> <a href="javascript:;" citynum="101110401">榆林</a> <a href="javascript:;" citynum="101110300">延安</a> </li>
+                    <li><a href="javascript:;" citynum="101100801">运城</a> <a href="javascript:;" citynum="101120501">烟台</a> <a href="javascript:;" citynum="101170101">银川</a> <a href="javascript:;" citynum="101200901">宜昌</a> <a href="javascript:;" citynum="101271101">宜宾</a> </li>
+                    <li><a href="javascript:;" citynum="101190701">盐城</a> <a href="javascript:;" citynum="101060301">延吉</a> <a href="javascript:;" citynum="101150601">玉树</a> <a href="javascript:;" citynum="101131001">伊宁</a> <a href="javascript:;" citynum="101280701">珠海</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--搜索城市名列表-->
+    <div id="onfocus-city" style="display: none;">
+        <ul id="ul1"></ul>
+        
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".add-botn").click(function () {
+            var num = $(this).attr("num");
+            if (num) window.addCity(num);
+        });
+        $("#close3,.cancel-botn").click(function () {
+            $("#add-citybox").hide();
+            $("#recom-city").hide();
+            $("#onfocus-city").hide();
+            $("#txtAddCity").val(window.searchText);
+        });
+    });
+</script>
+
+    <div class="wrap">
+        <!--搜索-->
+        
+<div class="search">
+    <span class="s_1"></span>
+    <input id="txtCity" class="sear ti_sh" value="输入城市名称、首字母、全拼均可" citynum="" type="text">
+    <span class="s_2"></span><a id="btnSearch" href="javascript:void(-1);"></a>
+    <div class="last_sear" style="margin-left: 50px; top: 11px;">
+        <!--最近搜索：<span></span> -->
+        
+        
+        
+        <div style="width: 500px; height: 30px;" id="201501141139260">
+            <script src="channel1_data/GetPutWay.ashx"></script>
+        <span id="ksd_bannner_container__041755509528305434"><script src="channel1_data/Banner.js" type="text/javascript"></script></span><img style="width: 500px; height: 30px;" src="channel1.htm" id="ksd_bannner_player_-1_041755509528305434_105"></div>
+        
+    </div>
+</div>
+<div></div>
+<script type="text/javascript">
+    window.searchText = "输入城市名称、首字母、全拼均可";
+    window.selectName = "txtCity";
+    window.cacheCityData = [];
+    var key = { UP: 38, DOWN: 40, TAB: 9, RETURN: 13 };
+    //window.isTopInput = function () { return window.selectName == "txtCity"; };
+    $(document).ready(function () {
+        ShowLastCity();
+        //点击热门推荐城市
+        $(".list-c a").click(function () {
+            var cityId = $(this).attr("citynum");
+            var cityName = $(this).text();
+            $("#onfocus-city").hide();
+            $("#recom-city").hide();
+            if (window.selectName == "txtCity") {
+                var cCity = { ID: cityId, Name: cityName };
+                ShowLastCity(cCity);
+                GetLastCity(cityId, cityName);
+            }
+            else {
+                $("#" + window.selectName).attr("citynum", cityId);
+                $("#" + window.selectName).val(cityName);
+            }
+        });
+        //显示推荐城市
+        $("#txtCity,#txtAddCity").focus(function () {
+            var txtCity = $(this);
+            txtCity.val("");
+            txtCity.attr("citynum", "");
+            $("#onfocus-city").hide();
+            $("#recom-city").show();
+            window.selectName = txtCity.attr("id");
+            if (window.selectName == "txtCity") {
+                $("#recom-city,#onfocus-city").css({ left: "21px", top: "40px" });
+            }
+            else {
+                $("#recom-city,#onfocus-city").css({ left: "319px", top: "309px" });
+            }
+        });
+        //输入监控
+        $("#txtCity,#txtAddCity").on('keyup', function (e) {
+            switch (e.keyCode) {
+                case key.UP:
+                case key.DOWN:
+                case key.TAB:
+                case key.RETURN:
+                    return;
+            }
+            if ($(this).val() == "") {
+                $("#onfocus-city").hide();
+                $("#recom-city").show();
+                $(document).data({ "keyboard-input": "disabled" });
+                $("#onfocus-city").removeClass("keyboard-input");
+                return;
+            } else {
+                $("#recom-city").hide();
+                $("#onfocus-city").show();
+                $(document).data({ "keyboard-input": "enabled" });
+                $("#onfocus-city").addClass("keyboard-input");
+            }
+            var keyWord = $(this).val().toLowerCase();
+            if (window.cacheCityData && window.cacheCityData.length > 0) {
+                SearchCitys(window.cacheCityData, keyWord);
+                SearchCityScroll();
+            }
+            else {
+                $.ajax({
+                    url: "CityList.aspx",
+                    cache: true,
+                    success: function (str) {
+                        window.cacheCityData = eval("(" + str + ")");
+                        SearchCitys(window.cacheCityData, keyWord);
+                        SearchCityScroll();
+                    }
+                });
+            }
+        });
+        $("#txtCity,#txtAddCity").each(function () {
+            var onthis = this;
+            if (this.attachEvent) {
+                this.attachEvent("onpropertychange", function (e) {
+                    if (e.propertyName != "value") return;
+                    $(onthis).trigger("input");
+                });
+            }
+        });
+        ////按键绑定
+        //$("#txtCity,#txtAddCity").on('keydown', function (event) {
+        //    var cName = "a-hover";
+        //    var key = { UP: 38, DOWN: 40, TAB: 9, RETURN: 13 };
+        //    var a = $("#onfocus-city ul li a");
+        //    var hover = $("#onfocus-city ul li a.a-hover").eq(0);
+        //    var hasSelect = hover.length;
+        //    if ($(this).val() != "") {
+        //        switch (event.keyCode) {
+        //            case key.UP:
+        //                if (a.eq(0).hasClass(cName)) return;
+        //                var prev = hover.parent().prev().children("a");
+        //                hover.removeClass(cName);
+        //                prev.addClass(cName);
+        //                break;
+        //            case key.DOWN:
+        //                if (a.eq(-1).hasClass(cName)) return;
+        //                if (hasSelect == 0) { a.eq(0).addClass(cName); return; }
+        //                var next = hover.parent().next().children("a");
+        //                hover.removeClass(cName);
+        //                next.addClass(cName);
+        //                break;
+        //            case key.TAB:
+        //            case key.RETURN:
+        //                if (hover) {
+        //                    var cityId = hover.attr("citynum");
+        //                    var cityName = hover.children("strong").text();
+        //                    $("#" + window.selectName).attr("citynum", cityId);
+        //                    $("#" + window.selectName).val(cityName);
+        //                    $("#recom-city").hide();
+        //                    $("#onfocus-city").hide();
+        //                    var cCity = { ID: cityId, Name: cityName };
+        //                    ShowLastCity(cCity);
+        //                    GetLastCity(cityId, cityName);
+        //                    $("#btnSearch").focus();
+        //                }
+        //                break;
+        //        }
+        //    }
+        //});
+        //隐藏推荐城市
+        $("#txtCity,#txtAddCity").blur(function () {
+            setTimeout(function () {
+                if ($("#" + window.selectName).val() == "") $("#" + window.selectName).val(window.searchText);
+                $("#onfocus-city").hide();
+                $("#recom-city").hide();
+            }, 200);
+        });
+        //推荐城市索引
+        var tabCity = $("#recom-city ul.c-tab li");
+        tabCity.mouseover(function () {
+            tabCity.removeClass("active");
+            $(this).addClass("active");
+            $(".list-c").hide();
+            tabCity.each(function (l) {
+                if ($(this).hasClass("active")) {
+                    $(".list-c").eq(l).show();
+                    return;
+                }
+            });
+        });
+        //搜索城市
+        $("#btnSearch").click(function () {
+            var cityId = $("#txtCity").attr("citynum");
+            var cityName = $("#txtCity").val();
+            if (cityId == "" || cityName == "" || cityName == window.searchText) {
+                return;
+            }
+            $.cookie("cityid", cityId, { expires: 365 }); //记录当前城市ID
+            var cCity = { ID: cityId, Name: cityName };
+            ShowLastCity(cCity);
+            GetLastCity(cityId, cityName);
+        });
+        //$("#onfocus-city").hover(function () {
+        //    $(document).data({ "keyboard-input": "enabled" });
+        //    $(this).addClass("keyboard-input");
+        //}, function () {
+        //    $(document).data({ "keyboard-input": "disabled" });
+        //    $(this).removeClass("keyboard-input");
+        //});
+        $(document).keydown(function (e) {
+            if (!window.isIe6()) {
+                var cName = "a-hover";
+                var a = $("#onfocus-city ul li a");
+                var hover = $("#onfocus-city ul li a.a-hover").eq(0);
+                var hasSelect = hover.length;
+                if ($(this).data("keyboard-input") === "enabled") {
+                    var activeElem = $(".keyboard-input"), activeElemPos = Math.abs($(".keyboard-input .mCSB_container").position().top), pixelsToScroll = 21;
+                    if (e.which === key.UP) {
+                        e.preventDefault();
+                        if (pixelsToScroll > activeElemPos) {
+                            activeElem.mCustomScrollbar("scrollTo", "top");
+                        } else {
+                            activeElem.mCustomScrollbar("scrollTo", (activeElemPos - pixelsToScroll), { scrollInertia: 0, scrollEasing: "easeOutCirc" });
+                        }
+                        if (a.eq(0).hasClass(cName)) return;
+                        var prev = hover.parent().prev().children("a");
+                        hover.removeClass(cName);
+                        prev.addClass(cName);
+
+                    } else if (e.which === key.DOWN) {
+                        if (hasSelect != 0) {
+                            e.preventDefault();
+                            activeElem.mCustomScrollbar("scrollTo", (activeElemPos + pixelsToScroll), { scrollInertia: 0, scrollEasing: "easeOutCirc" });
+                        }
+                        if (a.eq(-1).hasClass(cName)) return;
+                        if (hasSelect == 0) {
+                            a.eq(0).addClass(cName);
+                            return;
+                        }
+                        var next = hover.parent().next().children("a");
+                        hover.removeClass(cName);
+                        next.addClass(cName);
+                    } else if (e.which === key.TAB || e.which === key.RETURN) {
+                        if (hasSelect > 0 && hover) {
+                            var cityId = hover.attr("citynum");
+                            var cityName = hover.children("strong").text();
+                            $("#" + window.selectName).attr("citynum", cityId);
+                            $("#" + window.selectName).val(cityName);
+                            $("#onfocus-city").hide();
+                            $("#recom-city").hide();
+                            if (window.selectName == "txtCity") {
+                                var cCity = { ID: cityId, Name: cityName };
+                                ShowLastCity(cCity);
+                                GetLastCity(cityId, cityName);
+                            } else {
+                                $("#" + window.selectName).attr("citynum", cityId);
+                                $("#" + window.selectName).val(cityName);
+                            }
+                            $("#btnSearch").focus();
+                        }
+                    }
+                }
+            }
+        });
+    });
+    //搜索城市
+    function SearchCitys(cityData, keyWord) {
+        var arr = cityData;
+        var oUl = document.getElementById("ul1");
+        oUl.innerHTML = "";
+        if (!window.isIe6()) {
+            $(".mCustomScrollbar").mCustomScrollbar("update"); //更新滚动条高度
+        }
+        function serachWords(obj, d) {
+            if (obj.indexOf(keyWord) == 0) {
+                var oLi = document.createElement("li");
+                var str1 = obj.substring(0, keyWord.length);
+                var str2 = obj.substring(keyWord.length);
+                oLi.innerHTML = '<a cityNum=' + arr[d][0] + ' href="javascript:;"><strong>' + arr[d][2] + '</strong><span class="a-pin">(<span style="color:red">' + str1 + '</span>' + str2 + ')</span><em>-</em><span class="grey-t">' + arr[d][6] + '</span></a>';
+                oUl.appendChild(oLi);
+            }
+        }
+        //搜索关键字
+        for (var k = 0; k < arr.length; k++) {
+            serachWords(arr[k][1], k);
+            serachWords(arr[k][2], k);
+            serachWords(arr[k][7], k);
+        }
+        //搜索不到
+        if (!oUl.children.length) {
+            $("#onfocus-city").hide();
+        }
+        //搜索城市列表操作
+        var aOfli = oUl.getElementsByTagName("a");
+        for (var u = 0; u < aOfli.length; u++) {
+            aOfli[u].onmouseover = function () {
+                $("#onfocus-city ul li a.a-hover").removeClass("a-hover"); this.className = "a-hover";
+            };
+            aOfli[u].onclick = function () {
+                var cityId = this.getAttribute("cityNum");
+                var cityName = this.children[0].innerHTML;
+                $(this).attr("cityNum", cityId);
+                $(this).val(cityName);
+                if (window.selectName == "txtCity") {
+                    var cCity = { ID: cityId, Name: cityName };
+                    ShowLastCity(cCity);
+                    GetLastCity(cityId, cityName);
+                }
+                else {
+                    $("#" + window.selectName).attr("citynum", cityId);
+                    $("#" + window.selectName).val(cityName);
+                }
+                setTimeout(function () {
+                    //$("#onfocus-city").hide();
+                    //$("#txtAddCity").attr("citynum", "");
+                    //$("#txtAddCity").val(window.searchText);
+                    $("#txtAddCity").attr("citynum", cityId);
+                    $("#txtAddCity").val(cityName);
+                }, 100);
+                //$("#onfocus-city").hide();
+            };
+        }
+        if (!window.isIe6()) {
+            $(".mCustomScrollbar").mCustomScrollbar("update"); //更新滚动条高度
+        }
+    }
+    //搜索城市滚动条
+    function SearchCityScroll() {
+        if (!window.isIe6()) {
+            if (!$("#onfocus-city").hasClass("mCustomScrollbar")) {
+                $("#onfocus-city").mCustomScrollbar({ scrollButtons: { enable: true }, scrollInertia: 150 });
+            }
+        }
+    }
+    //获取最终城市显示(并更新TOP城市选中状态)
+    function GetLastCity(cityId, cityName) {
+        window.resetCity(cityId, cityName);
+        $(".cty_del").attr("class", "cty_del_No1");
+        $(".dz_li span.city").each(function () {
+            if ($(this).attr("citynum") == cityId) {
+                $(this).parent().attr("class", "cty_del");
+            }
+            $("#txtCity").attr("citynum", "");
+            $("#txtCity").val(window.searchText);
+        });
+        //读取一下当前生活指数
+        $("div.tab").children("div").each(function () {
+            if ($(this).hasClass("now")) $(this).click();
+        });
+    }
+    //获取TOP城市ID数组
+    function GetTopCityIDs() {
+        var arrIds = [];
+        for (var num = 0; num < 5; num++) {
+            var cookie = $.cookie("topcity" + num);
+            if (cookie) {
+                arrIds.push(cookie.split("|")[0]);
+            }
+        }
+        return arrIds;
+    }
+    //重新读取并显示最近搜索城市
+    function ShowLastCity(addCity) {
+        var lastCity = []; //城市数组
+        var lastHtml = []; //城市HTML
+        var arrIds = GetTopCityIDs(); //已添加TOP城市ID
+        var lastCityCookie = "";
+        if ($.cookie('lastcity')) {//读取Cookie中最近搜索城市
+            var cookieCitys = $.cookie('lastcity').split(",");
+            for (var i = 0; i < cookieCitys.length; i++) {
+                var arrCity = cookieCitys[i].split("|");
+                var objCity = { ID: arrCity[0], Name: arrCity[1] };
+                if (!arrIds.Contains(objCity.ID)) {
+                    lastCity.unshift(objCity);
+                }
+            }
+        }
+        if (addCity != null) {//添加城市
+            for (var a = 0; a < lastCity.length; a++) {
+                if (lastCity[a].ID == addCity.ID || arrIds.Contains(lastCity[a].ID)) {
+                    lastCity.splice(a, 1);
+                    a--;
+                }
+            }
+            if (!arrIds.Contains(addCity.ID)) {
+                lastCity.unshift(addCity);
+            }
+        }
+        while (lastCity.length > 5) lastCity.pop(); //保留历史记录数量
+        for (var c = 0; c < lastCity.length; c++) {
+            lastHtml[c] = "<a href=\"javascript:GetLastCity('" + lastCity[c].ID + "','" + lastCity[c].Name + "');\">" + lastCity[c].Name + "</a>";
+            lastCityCookie = lastCity[c].ID + "|" + lastCity[c].Name + "," + lastCityCookie;
+        }
+        $.cookie('lastcity', lastCityCookie.substr(0, lastCityCookie.length - 1), { expires: 3 });
+        //$(".last_sear span").html(lastHtml.join('、'));
+    }
+    //数组是否包含
+    Array.prototype.Contains = function (e) {
+        for (var xx = 0; xx < this.length && this[xx] != e; xx++);
+        return !(xx == this.length);
+    };
+</script>
+
+        <!--定制-->
+        
+<div class="dz" style="display: block;">
+    <div class="dz_li" style="display: block">
+        <a href="javascript:void(-1);" class="add_city" style="display: block;"><span class="bg_city"></span>
+            <h5>添加城市</h5>
+        </a><a class="cty_del_No1" style="display: none;" onclick="showCity(this);"><span class="city"></span><span class="temp"><span></span><em></em><span></span></span><span class="fn"><span></span><span></span></span>
+            <img src="channel1.htm" class="small">
+            <div class="cancle">
+            </div>
+        </a>
+    </div>
+    <div class="dz_li" style="display: block">
+        <a href="javascript:void(-1);" class="add_city" style="display: block;"><span class="bg_city"></span>
+            <h5>添加城市</h5>
+        </a><a class="cty_del_No1" style="display: none;" onclick="showCity(this);"><span class="city"></span><span class="temp"><span></span><em></em><span></span></span><span class="fn"><span></span><span></span></span>
+            <img src="channel1.htm" class="small">
+            <div class="cancle">
+            </div>
+        </a>
+    </div>
+    <div class="dz_li" style="display: block">
+        <a href="javascript:void(-1);" class="add_city" style="display: block;"><span class="bg_city"></span>
+            <h5>添加城市</h5>
+        </a><a class="cty_del_No1" style="display: none;" onclick="showCity(this);"><span class="city"></span><span class="temp"><span></span><em></em><span></span></span><span class="fn"><span></span><span></span></span>
+            <img src="channel1.htm" class="small">
+            <div class="cancle">
+            </div>
+        </a>
+    </div>
+    <div class="dz_li" style="display: block">
+        <a href="javascript:void(-1);" class="add_city" style="display: block;"><span class="bg_city"></span>
+            <h5>添加城市</h5>
+        </a><a class="cty_del_No1" style="display: none;" onclick="showCity(this);"><span class="city"></span><span class="temp"><span></span><em></em><span></span></span><span class="fn"><span></span><span></span></span>
+            <img src="channel1.htm" class="small">
+            <div class="cancle">
+            </div>
+        </a>
+    </div>
+    <div class="dz_li" style="display: block">
+        <a href="javascript:void(-1);" class="add_city" style="display: block;"><span class="bg_city"></span>
+            <h5>添加城市</h5>
+        </a><a class="cty_del_No1" style="display: none;" onclick="showCity(this);"><span class="city"></span><span class="temp"><span></span><em></em><span></span></span><span class="fn"><span></span><span></span></span>
+            <img src="channel1.htm" class="small">
+            <div class="cancle">
+            </div>
+        </a>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //添加TOP城市事件
+        $(".add_city").each(function (i) {
+            $(this).click(function () {
+                $("#txtAddCity").val(window.searchText);
+                $("#add-citybox").show();
+                $(".box-bg").height($(document).height());
+                $(".add-botn").attr("num", i);
+                if (window.isIe6()) {
+                    document.body.style.zoom = 1.1;
+                    document.body.style.zoom = '';
+                }
+            });
+        });
+        //取消TOP城市
+        $(".cancle").each(function (i) {
+            $(this).click(function () {
+                var p = $(this).parent();
+                p.hide();
+                p.prev().show();
+                $.cookie("topcity" + i, "", { expires: -1 });
+                return false;
+            });
+        });
+    });
+    //显示当前城市
+    function showCity(obj) {
+        $(".cty_del").attr("class", "cty_del_No1");
+        var top = $(obj);
+        top.attr("class", "cty_del");
+        var city = top.children("span.city");
+        window.resetCity(city.attr("citynum"), city.text());
+        //读取一下当前生活指数
+        $("div.tab").children("div").each(function () {
+            if ($(this).hasClass("now")) $(this).click();
+        });
+    }
+    //读取Top5城市Cookie
+    for (var num = 0; num < 5; num++) {
+        var cookie = $.cookie("topcity" + num);
+        if (cookie) {
+            var city = $(".add_city").eq(num);
+            var arrCity = cookie.split("|");
+            var cityId = arrCity[0];
+            var cityName = arrCity[1];
+            city.hide();
+            if ($.cookie("cityid") == cityId) {
+                city.next().attr("class", "cty_del_No1");
+            }
+            $(".dz_li span.city").eq(num).attr("citynum", cityId);
+            $(".dz_li span.city").eq(num).text(cityName);
+            city.next().show();
+            $.ajax({
+                type: "get",
+                cache: false,
+                dataType: "json",
+                url: "Weather.ashx",
+                data: "service=1&cityid=" + cityId,
+                success: function (msg) {
+                    var tempC = window.GetIntValue(msg.temp) + "°C";
+                    var tempF = (window.GetIntValue((window.GetIntValue(msg.temp)) * 1.8 + 32)) + "°F";
+                    var styleC = "display:block;";
+                    var styleF = "display:none;";
+                    //alert(window.isCelsius)
+                    if (!window.isCelsius) {//显示单位
+                        styleC = "display:none;";
+                        styleF = "display:block;";
+                    }
+                    var top = $(".dz_li span.city[citynum='" + msg.areaid + "']").parent();
+                    top.children("span.temp").html("<span class='tempC' style='" + styleC + "'>" + tempC + "</span>" + "<span class='tempF' style='" + styleF + "'>" + tempF + "</span>");
+                    top.children("span.fn").html("<span>" + window.aWeather[window.GetIntValue(msg.img)] + "</span><span>" + window.aFxDate[window.GetIntValue(msg.fx)] + window.aFlDate[window.GetIntValue(msg.fl)] + "</span>");
+                    var time = 2;
+                    var date = new Date();
+                    if (date.getHours() >= 6 && date.getHours() <= 18) time = 1;
+                    top.children("img.small").attr("src", window.imgpath + window.GetWeatherImgName(msg.img, time));
+                    //city.show();
+                }
+            });
+        }
+    }
+    //添加TOP城市
+    function addCity(num) {
+        var cityId = $("#txtAddCity").attr("citynum");
+        var cityName = $("#txtAddCity").val();
+        if (cityId == "" || cityName == "" || cityName == window.searchText) {
+            return;
+        }
+        var arrIds = window.GetTopCityIDs(); //已存在城市则不添加
+        if (arrIds.Contains(cityId)) {
+            alert("城市已添加");
+            return;
+        }
+        $.cookie("topcity" + num, cityId + "|" + cityName, { expires: 365 }); //记录当前城市ID
+        $.ajax({
+            type: "get",
+            cache: false,
+            dataType: "json",
+            url: "Weather.ashx",
+            data: "service=1&cityid=" + cityId,
+            success: function (msg) {
+                var tempC = window.GetIntValue(msg.temp) + "°C";
+                var tempF = (window.GetIntValue((window.GetIntValue(msg.temp)) * 1.8 + 32)) + "°F";
+                var styleC = "display:block;";
+                var styleF = "display:none;";
+                if (!window.isCelsius) {//显示单位
+                    styleC = "display:none;";
+                    styleF = "display:block;";
+                }
+                $("span.temp").eq(num).html("<span class='tempC' style='" + styleC + "'>" + tempC + "</span>" + "<span class='tempF' style='" + styleF + "'>" + tempF + "</span>");
+                $("span.fn").eq(num).html("<span>" + window.aWeather[window.GetIntValue(msg.img)] + "</span><span>" + window.aFxDate[window.GetIntValue(msg.fx)] + window.aFlDate[window.GetIntValue(msg.fl)] + "</span>");
+                var time = 2;
+                var date = new Date();
+                if (date.getHours() >= 6 && date.getHours() <= 18) time = 1;
+                $("img.small").eq(num).attr("src", window.imgpath + window.GetWeatherImgName(msg.img, time));
+            }
+        });
+        $("span.city").eq(num).html(cityName);
+        $("span.city").eq(num).attr("citynum", cityId);
+        var city = $(".add_city").eq(num);
+        city.hide();
+        city.next().show();
+        $("#add-citybox").hide();
+        $(".cty_del").attr("class", "cty_del_No1");
+        $(".dz_li span.city").each(function () {
+            if ($(this).attr("citynum") == cityId) $(this).parent().attr("class", "cty_del");
+        });
+        $("#txtCity").attr("citynum", "");
+        $("#txtCity").val(window.searchText);
+        //window.ShowLastCity();
+
+        var cCity = { ID: cityId, Name: cityName };
+        window.ShowLastCity(cCity);
+        window.GetLastCity(cityId, cityName);
+    }
+    //切换Top城市温度单位
+    function shiftTemp() {
+        $("span.tempC").show();
+        $("span.tempF").hide();
+        if (!window.isCelsius) {
+            $("span.tempC").hide();
+            $("span.tempF").show();
+        }
+    }
+</script>
+
+        <div class="clear">
+        </div>
+        
+<!--城市预报-->
+<div class="city_fon">
+    <div>
+        <span class="city_name" id="spcity_name">北京</span> <span class="cty2">[<a href="javascript:;" id="setdefaultcity">取消默认</a>] </span><span class="cty3"><span class="sk">实况<span class="temp1" id="spsk">30</span><em lable="emtempunit">°C</em></span> <span class="wet">湿度&nbsp;<span id="spshidu">52</span>%</span> <span class="wind" id="spwind">2级</span><span style="" class="pm" id="spanpm">PM2.5:<span id="sppm">98</span></span> <span class="worn" id="spworn" style="display: none;"><a target="_blank" href="http://www.weather.com.cn/alarm/newalarmlist.shtml"></a></span></span>
+        <div class="share" style="display: none;">
+            <h5>分享到：</h5>
+            <a href="javascript:;" class="xl"></a><a href="http://ext.weather.com.cn/home/javascript;;" class="qq"></a><a href="http://ext.weather.com.cn/home/javascript;;" class="peo"></a>
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>
+<!--天气预报和生活指数 标签切换-->
+<div class="tabNa">
+    <div>
+        <span id="spyubaocom" class="com now" style="cursor: pointer"></span><span id="spyubaowea" class="wea now" style="cursor: pointer">天气预报</span>
+    </div>
+    <div>
+        <span id="spzhishucom" class="com" style="cursor: pointer"></span><span id="spzhishuwea" class="wea" style="cursor: pointer">生活指数</span>
+    </div>
+</div>
+<div class="clear">
+</div>
+<!--天气预报和生活指数-->
+<div class="wea_lif">
+    <!--天气预报-->
+    <div id="divweather" class="weather" style="display: block;">
+        <div class="wth_top">
+            <!--左边-->
+            <div class="w_top_l">
+                <div class="w_time">
+                    <span>
+                        2016.06.20</span> <span>星期一</span> <span>农历五月十五</span> (<span id="spftime">08:00</span><span>发布</span>)
+                </div>
+                <span class="w_date">今天白天 </span>
+                <div class="w_del">
+                    <span class="w_temp" id="sptemp1">33</span> <em lable="emtempunit">°C</em> <span class="w_fn" id="spimg1">雷阵雨</span>
+                    <img src="channel1_data/04.png" id="imgday1" alt="" class="w_l big">
+                </div>
+                <div class="clear">
+                </div>
+                <div class="w_gk">
+                    <span class="w_wind">风力风向：<span id="spflfx1">无持续风向 微风</span></span>
+                </div>
+            </div>
+            <!--左边结束-->
+            <!--右边开始-->
+            <div class="w_top_r">
+                <span class="w_date">今天晚上 </span>
+                <div class="w_del">
+                    <span class="w_temp" id="sptemp2">22</span> <em lable="emtempunit">°C</em> <span class="w_fn" id="spimg2">雷阵雨</span>
+                    <img src="channel1_data/04.png" id="imgnight1" alt="" class="w_r big">
+                </div>
+                <div class="clear">
+                </div>
+                <div class="w_gk">
+                    <span class="w_wind">风力风向：<span id="spflfx2">无持续风向 微风</span></span>
+                </div>
+            </div>
+            <!--右边结束-->
+        </div>
+        <!--小标签 摄氏度和华氏度-->
+        <div class="act">
+            <span class="now" id="sptabtempunitC" style="cursor: pointer">°C</span> <span class="" id="sptabtempunitF" style="cursor: pointer">°F</span>
+        </div>
+        <!--小标签 摄氏度和华氏度 结束-->
+        <!--未来几天天气预报-->
+        <div class="wth-bottom" id="divweilai">
+            <div class="mod">
+                <h4>明天 <span style="display: inline-block;">星期二</span> </h4>
+                <div class="mod_01">
+                    <span>白天</span>
+                    <img src="channel1_data/04.png" class="sp1">
+                    <span lable="spantempvalueunit">31°C</span><span class="sp2">雷阵雨</span> <span class="sp3">无持续风向 微风</span>
+                </div>
+                <div class="mod_02">
+                    <span>夜间</span>
+                    <img src="channel1_data/04.png" class="sp1">
+                    <span lable="spantempvalueunit">22°C</span><span class="sp2">雷阵雨</span> <span class="sp3">无持续风向 微风</span>
+                </div>
+            </div>
+            <div class="mod">
+                <h4>后天 <span style="display: inline-block;">星期三</span> </h4>
+                <div class="mod_01">
+                    <span>白天</span>
+                    <img src="channel1_data/04.png" class="sp1">
+                    <span lable="spantempvalueunit">33°C</span><span class="sp2">雷阵雨</span> <span class="sp3">无持续风向 微风</span>
+                </div>
+                <div class="mod_02">
+                    <span>夜间</span>
+                    <img src="channel1_data/04.png" class="sp1">
+                    <span lable="spantempvalueunit">24°C</span><span class="sp2">雷阵雨</span> <span class="sp3">无持续风向 微风</span>
+                </div>
+            </div>
+            <div class="mod">
+                <h4>
+                    6月23日 <span style="display: inline-block;">星期四</span> </h4>
+                <div class="mod_01">
+                    <span>白天</span>
+                    <img src="channel1_data/04.png" class="sp1">
+                    <span lable="spantempvalueunit">35°C</span><span class="sp2">阴</span> <span class="sp3">无持续风向 微风</span>
+                </div>
+                <div class="mod_02">
+                    <span>夜间</span>
+                    <img src="channel1_data/04.png" class="sp1">
+                    <span lable="spantempvalueunit">23°C</span><span class="sp2">晴</span> <span class="sp3">无持续风向 微风</span>
+                </div>
+            </div>
+            <div class="mod">
+                <h4>
+                    6月24日 <span style="display: inline-block;">星期五</span> </h4>
+                <div class="mod_01">
+                    <span>白天</span>
+                    <img src="channel1_data/02.png" class="sp1">
+                    <span lable="spantempvalueunit">30°C</span><span class="sp2">晴</span> <span class="sp3">无持续风向 微风</span>
+                </div>
+                <div class="mod_02">
+                    <span>夜间</span>
+                    <img src="channel1_data/night_00.png" class="sp1">
+                    <span lable="spantempvalueunit">21°C</span><span class="sp2">多云</span> <span class="sp3">无持续风向 微风</span>
+                </div>
+            </div>
+        </div>
+        <!--未来几天天气预报 结束-->
+        <div class="bg_01 bg_li">
+        </div>
+    </div>
+    <!--天气预报结束-->
+    <!--生活指数-->
+    <div id="divzhishu" class="life" style="display: none;">
+        <!--按钮标签-->
+        <div class="tab">
+            <div class="now" style="cursor: pointer" onclick="switchTab(this,'24')">
+                <p></p>
+                <span>今天</span>
+            </div>
+            <div style="cursor: pointer" onclick="switchTab(this,'48')">
+                <p></p>
+                <span>明天</span>
+            </div>
+            <div style="cursor: pointer" onclick="switchTab(this,'72')">
+                <p></p>
+                <span>后天</span>
+            </div>
+        </div>
+        <!--生活指数详情-->
+        <div class="life_del">
+            <div style="position: relative;">
+                <div class="null">
+                </div>
+                <div class="lif_cont mCustomScrollbar _mCS_1" id="divzhishuList"><div class="mCustomScrollBox mCS-light" id="mCSB_1" style="position:relative; height:100%; overflow:hidden; max-width:100%;"><div class="mCSB_container" style="position:relative; top:0;"><div class="div"><p class="numb_01"></p><img src="channel1_data/ag.png"><p class="lif_p">息斯敏过敏指数 :<span>不易发</span></p><span class="dal" title="天气条件不易诱发过敏，可放心外出，除特殊体质外，无需担心过敏问题。">天气条件不易诱发过敏，可放心外出，除特殊体质外，无需担心过敏问题。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/cl.png"><p class="lif_p">晨练指数 :<span>较不宜</span></p><span class="dal" title="有降水，较不宜晨练，室外锻炼请携带雨具。建议年老体弱人群适当减少晨练时间。">有降水，较不宜晨练，室外锻炼请携带雨具。建议年老体弱人群适当减少晨练时间。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/lk.png"><p class="lif_p">路况指数 :<span>潮湿</span></p><span class="dal" title="有降水，路面潮湿，车辆易打滑，请小心驾驶。">有降水，路面潮湿，车辆易打滑，请小心驾驶。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/yh.png"><p class="lif_p">约会指数 :<span>较不适宜</span></p><span class="dal" title="天气较热，且有时会有降水，如果外出约会请选择荫凉地点并做好防雨工作。">天气较热，且有时会有降水，如果外出约会请选择荫凉地点并做好防雨工作。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/uv.png"><p class="lif_p">紫外线强度指数 :<span>中等</span></p><span class="dal" title="属中等强度紫外线辐射天气，外出时建议涂擦SPF高于15、PA+的防晒护肤品，戴帽子、太阳镜。">属中等强度紫外线辐射天气，外出时建议涂擦SPF高于15、PA+的防晒护肤品，戴帽子、太阳镜。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/ls.png"><p class="lif_p">晾晒指数 :<span>不宜</span></p><span class="dal" title="有降水，不适宜晾晒。若需要晾晒，请在室内准备出充足的空间。">有降水，不适宜晾晒。若需要晾晒，请在室内准备出充足的空间。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/mf.png"><p class="lif_p">美发指数 :<span>一般</span></p><span class="dal" title="头发需要保持清洁，同时要注意防晒，含防晒成分洗发护发品以及遮阳帽、伞是很好的选择。">头发需要保持清洁，同时要注意防晒，含防晒成分洗发护发品以及遮阳帽、伞是很好的选择。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/pj.png"><p class="lif_p">啤酒指数 :<span>适宜</span></p><span class="dal" title="炎热干燥，一杯清凉的啤酒可有助于缓解燥热之苦，并带来舒爽的感觉。但注意不要贪杯呦！">炎热干燥，一杯清凉的啤酒可有助于缓解燥热之苦，并带来舒爽的感觉。但注意不要贪杯呦！</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/tr.png"><p class="lif_p">旅游指数 :<span>一般</span></p><span class="dal" title="较热，微风，有降水，请尽量不要外出，若外出，请注意防雷并携带雨具，注意防暑降温。">较热，微风，有降水，请尽量不要外出，若外出，请注意防雷并携带雨具，注意防暑降温。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/yd.png"><p class="lif_p">运动指数 :<span>较不宜</span></p><span class="dal" title="有降水，推荐您在室内进行健身休闲运动；若坚持户外运动，须注意携带雨具并注意避雨防滑。">有降水，推荐您在室内进行健身休闲运动；若坚持户外运动，须注意携带雨具并注意避雨防滑。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/hc.png"><p class="lif_p">划船指数 :<span>不适宜</span></p><span class="dal" title="白天天气不好，不适宜划船，建议选择别的娱乐方式。">白天天气不好，不适宜划船，建议选择别的娱乐方式。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/ac.png"><p class="lif_p">空调开启指数 :<span>部分时间开启</span></p><span class="dal" title="天气热，再加上近两天的较高温天气您将感到些燥热，因此需要适当开启制冷空调来降低温度。">天气热，再加上近两天的较高温天气您将感到些燥热，因此需要适当开启制冷空调来降低温度。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/ct.png"><p class="lif_p">穿衣指数 :<span>炎热</span></p><span class="dal" title="天气炎热，建议着短衫、短裙、短裤、薄型T恤衫等清凉夏季服装。">天气炎热，建议着短衫、短裙、短裤、薄型T恤衫等清凉夏季服装。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/gj.png"><p class="lif_p">逛街指数 :<span>较不宜</span></p><span class="dal" title="有降水，并且天气较热，较不适宜逛街，若坚持出门，请带上雨具避免淋雨，并注意防暑降温。">有降水，并且天气较热，较不适宜逛街，若坚持出门，请带上雨具避免淋雨，并注意防暑降温。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/ys.png"><p class="lif_p">雨伞指数 :<span>带伞</span></p><span class="dal" title="有降水，如果您要短时间外出的话可不必带雨伞。">有降水，如果您要短时间外出的话可不必带雨伞。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/nl.png"><p class="lif_p">夜生活指数 :<span>较适宜</span></p><span class="dal" title="虽然有时有有降水，但只要提前有所准备，您仍然可以享受夜生活的乐趣。">虽然有时有有降水，但只要提前有所准备，您仍然可以享受夜生活的乐趣。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/pk.png"><p class="lif_p">放风筝指数 :<span>不宜</span></p><span class="dal" title="天气不好，不适宜放风筝。">天气不好，不适宜放风筝。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/zs.png"><p class="lif_p">中暑指数 :<span>少发</span></p><span class="dal" title="气温偏高，且连日气温一直较高，有可能中暑，体弱者请避免长时间在日光下暴晒或在高温环境中工作。">气温偏高，且连日气温一直较高，有可能中暑，体弱者请避免长时间在日光下暴晒或在高温环境中工作。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/xc.png"><p class="lif_p">洗车指数 :<span>不宜</span></p><span class="dal" title="不宜洗车，未来24小时内有雨，如果在此期间洗车，雨水和路上的泥水可能会再次弄脏您的爱车。">不宜洗车，未来24小时内有雨，如果在此期间洗车，雨水和路上的泥水可能会再次弄脏您的爱车。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/co.png"><p class="lif_p">舒适度指数 :<span>较不舒适</span></p><span class="dal" title="白天天气较热，虽然有雨，但仍然无法削弱较高气温给人们带来的暑意，这种天气会让您感到不很舒适。">白天天气较热，虽然有雨，但仍然无法削弱较高气温给人们带来的暑意，这种天气会让您感到不很舒适。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/dy.png"><p class="lif_p">钓鱼指数 :<span>不宜</span></p><span class="dal" title="天气太热，不适合垂钓。">天气太热，不适合垂钓。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/fs.png"><p class="lif_p">防晒指数 :<span>中等</span></p><span class="dal" title="属中等强度紫外辐射天气，外出时应注意防护，建议涂擦SPF指数高于15，PA+的防晒护肤品。">属中等强度紫外辐射天气，外出时应注意防护，建议涂擦SPF指数高于15，PA+的防晒护肤品。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/gm.png"><p class="lif_p">感冒指数 :<span>少发</span></p><span class="dal" title="各项气象条件适宜，发生感冒机率较低。但请避免长期处于空调房间中，以防感冒。">各项气象条件适宜，发生感冒机率较低。但请避免长期处于空调房间中，以防感冒。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/jt.png"><p class="lif_p">交通指数 :<span>较好</span></p><span class="dal" title="有降水，能见度不太好且路面潮湿，不适宜高速行驶，司机应更加集中注意力，小心驾驶。">有降水，能见度不太好且路面潮湿，不适宜高速行驶，司机应更加集中注意力，小心驾驶。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/xq.png"><p class="lif_p">心情指数 :<span>较差</span></p><span class="dal" title="有降水，雨水不仅给大地带来了一丝清凉，也可让较高气温带来的烦躁心绪降降温。">有降水，雨水不仅给大地带来了一丝清凉，也可让较高气温带来的烦躁心绪降降温。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/pl.png"><p class="lif_p">空气污染扩散条件指数 :<span>良</span></p><span class="dal" title="气象条件有利于空气污染物稀释、扩散和清除，可在室外正常活动。">气象条件有利于空气污染物稀释、扩散和清除，可在室外正常活动。</span></div><div class="div"><p class="numb_01"></p><img src="channel1_data/pp.png"><p class="lif_p">化妆指数 :<span>防脱水</span></p><span class="dal" title="天气较热，易出汗，建议使用防脱水化妆品，少用粉底和胭脂，经常补粉。">天气较热，易出汗，建议使用防脱水化妆品，少用粉底和胭脂，经常补粉。</span></div></div><div class="mCSB_scrollTools" style="position:absolute;"><a class="mCSB_buttonUp" oncontextmenu="return false;"></a><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position:relative;"></div></div><div class="mCSB_draggerRail"></div></div><a class="mCSB_buttonDown" oncontextmenu="return false;"></a></div></div></div>
+                <div class="bg_02 bg_li">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--生活指数结束-->
+</div>
+<script type="text/javascript">
+    $("#spyubaowea").click(function () {
+        $("#spzhishucom").removeClass("now");
+        $("#spzhishuwea").removeClass("now");
+        $("#spyubaocom").addClass("now");
+        $("#spyubaowea").addClass("now");
+        $("#divweather").show();
+        $("#divzhishu").hide();
+    });
+    $("#spzhishuwea").click(function () {
+        $("#spyubaocom").removeClass("now");
+        $("#spyubaowea").removeClass("now");
+        $("#spzhishucom").addClass("now");
+        $("#spzhishuwea").addClass("now");
+        $("#divweather").hide();
+        $("#divzhishu").show();
+        getzhishu("24");
+    });
+    $("#sptabtempunitC").click(function () {
+        if (isCelsius) return;
+        isCelsius = true;
+        $(this).addClass("now");
+        $("#sptabtempunitF").removeClass("now");
+        Getskdata();
+        Get7daydata();
+        switchunit("°F", "°C");
+        window.shiftTemp();
+    });
+    $("#sptabtempunitF").click(function () {
+        if (!isCelsius) return;
+        isCelsius = false;
+        $(this).addClass("now");
+        $("#sptabtempunitC").removeClass("now");
+        $("#spsk").text(GetIntValue((GetIntValue($("#spsk").text())) * 1.8 + 32));
+        $("#sptemp1").text(GetIntValue((GetIntValue($("#sptemp1").text())) * 1.8 + 32));
+        $("#sptemp2").text(GetIntValue((GetIntValue($("#sptemp2").text())) * 1.8 + 32));
+        $("span[lable='spantempvalueunit']", $("#divweilai")).each(function () {
+            var strtemp = $(this).text().replace("°C", "");
+            $(this).text(GetIntValue(GetIntValue(strtemp) * 1.8 + 32) + "°F");
+        });
+        switchunit("°C", "°F");
+        window.shiftTemp();
+    });
+    $("#setdefaultcity").click(function () {
+        if ($.cookie("cityid") != $.cookie("defaultcityid")) {
+            $.cookie("defaultcityid", $.cookie("cityid"), { expires: 365 });
+            $(this).text("取消默认");
+        }
+        else {
+            $.cookie("defaultcityid", null, { expires: -1 });
+            $.removeCookie("defaultcityid");
+            $(this).text("设为默认");
+        }
+    });
+</script>
+<script type="text/javascript">
+    function resetCity(cityid, cityname) {
+        $.cookie('cityid', cityid);
+        $("#spcity_name").text(cityname);
+        Getpmdata();
+        Getskdata();
+        Get7daydata();
+        getyjdata();
+        if ($.cookie("cityid") != $.cookie("defaultcityid")) {
+            $("#setdefaultcity").text("设为默认");
+        } else {
+            $("#setdefaultcity").text("取消默认");
+        }
+    }
+    function getzhishu(date) {
+        $.ajax({
+            type: "get",
+            cache: false,
+            dataType: "json",
+            url: "Weather.ashx",
+            data: "service=3&cityid=" + $.cookie("cityid") + "&zsname=" + arrzhishus.join(),
+            success: function (msg) {
+                $("#divzhishuList").empty();
+                var div = '<div class="div"><p class="numb_01"></p><img src="{0}"/><p class="lif_p">{1} :<span>{2}</span></p><span class="dal" title="{3}">{4}</span></div>';
+                for (var i = 0; i < msg.length; i++) {
+                    if (!msg[i].zstype) continue;
+                    var divcontent = String.format(div, imgpath + "zhishu/" + msg[i].zstype + getsuffix(), getzsname(msg[i].zstype), eval("msg[i].hint_" + date), eval("msg[i].des_" + date), substring(eval("msg[i].des_" + date), 52));
+                    $("#divzhishuList").append(divcontent);
+                }
+                if (!window.isIe6()) {
+                    $("#divzhishuList").mCustomScrollbar({ scrollButtons: { enable: true }, scrollInertia: 150 });
+                }
+            }
+        });
+    }
+    function switchunit(oldunit, newunit) {
+        $("em[lable='emtempunit']").each(function () {
+            $(this).text(newunit);
+        });
+        $("span[lable='spantempvalueunit']", $("#divweilai")).each(function () {
+            $(this).text($(this).text().replace(oldunit, newunit));
+        });
+    }
+    function switchTab(dom, day) {
+        $(dom).parent().children("div").each(function () {
+            $(this).removeClass("now");
+        });
+        $(dom).addClass("now");
+        getzhishu(day);
+    }
+    function Getpmdata() {
+        $.ajax({
+            type: "get",
+            cache: false,
+            dataType: "json",
+            url: "Weather.ashx",
+            data: "service=12&cityid=" + $.cookie("cityid"),
+            success: function (msg) {
+                $("#spanpm").hide();
+                if (msg && msg.pm25) {
+                    $("#spanpm").show();
+                    $("#sppm").text(msg.pm25);
+                }
+            }
+        });
+    }
+    function Getskdata() {
+        $.ajax({
+            type: "get",
+            cache: false,
+            dataType: "json",
+            url: "Weather.ashx",
+            data: "service=1&cityid=" + $.cookie("cityid"),
+            success: function (msg) {
+                $("#spsk").text(msg.temp);
+                $("#spshidu").text(msg.sd);
+                $("#spwind").text(msg.fl == 0 ? "微风" : (msg.fl+"级"));
+                if (!isCelsius) {
+                    $("#spsk").text(GetIntValue((GetIntValue(msg.temp)) * 1.8 + 32));
+                    switchunit("°C", "°F");
+                }
+            }
+        });
+    }
+    function Get7daydata() {
+        $.ajax({
+            type: "get",
+            dataType: "json",
+            cache: true,
+            url: "Weather.ashx",
+            data: "service=2&cityid=" + $.cookie("cityid"),
+            success: function (msg) {
+                $("#spftime").text(msg.ftime.split(" ")[1].substring(0, 5));
+                $("#sptemp1").text(msg.qtyb.temp1);
+                $("#sptemp2").text(msg.qtyb.temp2);
+                $("#spimg1").text(aWeather[GetIntValue(msg.qtyb.img1)]);
+                $("#spimg2").text(aWeather[GetIntValue(msg.qtyb.img2)]);
+                $("#spflfx1").text(aFxDate[GetIntValue(msg.qtyb.fx1)] + " " + aFlDate[GetIntValue(msg.qtyb.fl1)]);
+                $("#spflfx2").text(aFxDate[GetIntValue(msg.qtyb.fx2)] + " " + aFlDate[GetIntValue(msg.qtyb.fl2)]);
+                $("#imgday1").attr("src", imgpath + GetWeatherImgName(msg.qtyb.img1, 1));
+                $("#imgnight1").attr("src", imgpath + GetWeatherImgName(msg.qtyb.img2, 2));
+                var i = 3;
+                $("#divweilai").children().each(function () {
+                    var j = i;
+                    $("img.sp1", $(this)).each(function () {
+                        $(this).attr("src", imgpath + GetWeatherImgName(eval("msg.qtyb.img" + j), j));
+                        j++;
+                    });
+                    $("span.sp2", $(this)).each(function () {
+                        $(this).text(eval("aWeather[GetIntValue(msg.qtyb.img" + j + ")]"));
+                        j++;
+                    });
+                    j = i;
+                    $("span.sp3", $(this)).each(function () {
+                        $(this).text(eval("aFxDate[msg.qtyb.fx" + j + "]") + " " + eval("aFlDate[msg.qtyb.fl" + j + "]"));
+                        j++;
+                    });
+                    j = i;
+                    $("span[lable='spantempvalueunit']", $(this)).each(function () {
+                        $(this).text(eval("msg.qtyb.temp" + j) + "°C");
+                        j++;
+                    });
+                    i = i + 2;
+                });
+                if (!isCelsius) {
+                    $("#sptemp1").text(GetIntValue((GetIntValue(msg.qtyb.temp1)) * 1.8 + 32));
+                    $("#sptemp2").text(GetIntValue((GetIntValue(msg.qtyb.temp2)) * 1.8 + 32));
+                    $("span[lable='spantempvalueunit']", $("#divweilai")).each(function () {
+                        var strtemp = $(this).text().replace("°C", "");
+                        $(this).text(GetIntValue(GetIntValue(strtemp) * 1.8 + 32) + "°F");
+                    });
+                    switchunit("°C", "°F");
+                }
+            }
+        });
+    }
+</script>
+
+        <!--广告位1-->
+        <div class="adm_l1">
+            <script type="text/javascript">
+                /*960*90 创建于 2014-08-06*/
+                var cpro_id = "u1646794";
+            </script>
+            <script src="channel1_data/c.js" type="text/javascript"></script><div id="BAIDU_SSP__wrapper_u1646794_0"><iframe id="iframeu1646794_0" src="channel1_data/achm.htm" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true" align="center,center" frameborder="0" height="90" width="960"></iframe></div>
+        </div>
+        <!--热门城市定位和预警信息-->
+        <div class="hot_cty">
+            
+<!--热门城市定位-->
+<div class="hot_l">
+    <p class="title">
+        <span>热门城市定位</span>
+    </p>
+    <div class="cty_con">
+        <ul>
+            <li class="li_01">
+                <p>
+                    <span>B</span>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101010100');">北京</a>
+                </p>
+                <p>
+                    <a href="javascript:;" class="cp_a2" onclick="viewcity(this,'101080201');">包头</a>
+                </p>
+                <p>
+                    <a href="javascript:;" class="cp_a2" onclick="viewcity(this,'101301301');">北海</a>
+                </p>
+                <p>
+                    <a href="javascript:;" class="cp_a2" onclick="viewcity(this,'101290501');">保山</a>
+                </p>
+            </li>
+            <li class="li_02">
+                <p>
+                    <span>G</span>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101260101');">贵阳</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101300501');">桂林</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101280101');">广州</a>
+                </p>
+                <p>
+                    <span>H</span>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101210101');">杭州</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101310101');">海口</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101050101');">哈尔滨</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101080101');">呼和浩特</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101220101');">合肥</a>
+                </p>
+                <p>
+                    <span>J</span>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101120101');">济南</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101070701');">锦州</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101161401');">嘉峪关</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101240608');">井冈山</a>
+                </p>
+                <p>
+                    <span>K</span>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101290101');">昆明</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101130901');">喀什</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101130201');">克拉玛依</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101271802');">康定</a>
+                </p>
+            </li>
+            <li class="li_03">
+                <p>
+                    <span>N</span>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101190101');">南京</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101300101');">南宁</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101240101');">南昌</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101210401');">宁波</a>
+                </p>
+                <p>
+                    <span>Q</span>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101120201');">青岛</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101091101');">秦皇岛</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101050201');">齐齐哈尔</a>
+                </p>
+                <p>
+                    <span>S</span>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101280601');">深圳</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101070101');">沈阳</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101310201');">三亚</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101020100');">上海</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101280501');">汕头</a>
+                </p>
+                <p>
+                    <a href="javascript:;" class="cp_a2" onclick="viewcity(this,'101090101');">石家庄</a>
+                </p>
+            </li>
+            <li class="li_04">
+                <p>
+                    <span>X</span>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101110101');">西安</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101230201');">厦门</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101150101');">西宁</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101190801');">徐州</a>
+                </p>
+                <p>
+                    <span>Y</span>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101170101');">银川</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101200901');">宜昌</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101110300');">延安</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101120501');">烟台</a>
+                </p>
+                <p>
+                    <a href="javascript:;" class="cp_a2" onclick="viewcity(this,'101150601');">玉树</a>
+                </p>
+                <p>
+                    <span>Z</span>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101180101');">郑州</a>
+                    <a href="javascript:;" class="cp_a1" onclick="viewcity(this,'101280701');">珠海</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function viewcity(that, cityid) {
+        GetLastCity(cityid, $(that).text());
+    }
+</script>
+
+            
+<!--预警-->
+<div class="hot_r">
+    <p class="title"><span>预警信息</span> <a target="_blank" href="http://www.weather.com.cn/alarm/newalarmlist.shtml">More&gt;&gt;</a> </p>
+    <ul id="ulyujing"><li style="padding-top:87px;"><span style="padding-left: 62px;font-size: 15px;">当前城市暂无任何预警</span></li></ul>
+</div>
+<script type="text/javascript">
+    function getyjdata() {
+        $.ajax({
+            type: "get",
+            cache: false,
+            dataType: "json",
+            url: "Weather.ashx",
+            data: "service=5&cityid=" + $.cookie("cityid"),
+            success: function (msg) {
+                $("#ulyujing").empty();
+                var li = '<li class="ys_li{0}"><a href="javascript:;"><img src="{1}"/><span class="p" title="{2}">{3}</span><span class="year">{4}</span></a></li>';
+                if (msg.length >= 2) {
+                    for (var i = msg.length - 1; i >= msg.length - 2; i--) {
+                        var tip = "1";
+                        if (i == msg.length - 2) tip = "2";
+                        var licontent = String.format(li, tip, window.imgpath + window.getyjimg(msg[i].st_no, msg[i].sl_no, msg[i].province), msg[i].content, substring(msg[i].content, 25), msg[i].ftime);
+                        $("#ulyujing").append(licontent);
+                    }
+                } else if (msg.length == 1) {
+                    var i = 0;
+                    var licontent = String.format(li, i + 1, window.imgpath + window.getyjimg(msg[i].st_no, msg[i].sl_no, msg[i].province), msg[i].content, substring(msg[i].content, 25), msg[i].ftime);
+                    $("#ulyujing").append(licontent);
+                    $("#ulyujing").append('<li style="padding-top:49px;"><span style="padding-left: 62px;font-size: 15px;" >当前城市只有一条预警</span></li>');
+                }
+                else {
+                    $("#ulyujing").append('<li style="padding-top:87px;"><span style="padding-left: 62px;font-size: 15px;" >当前城市暂无任何预警</span></li>');
+                }
+                if (msg.length > 0) $("#spworn").show();
+                else $("#spworn").hide();
+            }
+        });
+    }
+</script>
+
+        </div>
+        <!--天气预报和天气指数结束-->
+        <div class="clear">
+        </div>
+        <!--广告位-->
+        
+    </div>
+    </form>
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0b1131cbd7882552693ca64d36cd9c23' type='text/javascript'%3E%3C/script%3E"));
+    </script><script src="channel1_data/h.js" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=0b1131cbd7882552693ca64d36cd9c23" target="_blank"><img src="channel1_data/21.gif" border="0" height="20" width="20"></a>
+        <script type="text/javascript">
+            /*120*300 创建于 2014-08-05*/
+            var cpro_id = "u1645764";
+</script>
+<script src="channel1_data/f.js" type="text/javascript"></script><div id="BAIDU_SSP__wrapper_u1645764_0"></div>
+
+
+
+<span id="201501141139260"></span></body></html>

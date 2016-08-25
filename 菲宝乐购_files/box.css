@@ -1,0 +1,218 @@
+@charset "utf-8";
+/*.head{background-image: url("../image/mod_banner_bg.png")!important; }*/
+
+#backToTop {
+display:none;
+width: 95px;
+height: 130px;
+padding: 5px 0;
+background: url(../image/brandslogo/backtotop.png) no-repeat;
+//_background: url(../image/brandslogo/backtotop.gif) no-repeat;
+background-position: 0 -20px;
+text-align: center;
+position: fixed;
+_position: absolute;
+right:20px;
+
+bottom: 24px;
+_bottom: "auto";
+cursor: pointer;
+z-index:9999;
+}
+
+
+
+body {
+}
+
+#TB_window {
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+#TB_secondLine {
+	font: 10px Arial, Helvetica, sans-serif;
+	color:#666666;
+}
+
+#TB_window a:link {color: #666666;}
+#TB_window a:visited {color: #666666;}
+#TB_window a:hover {color: #000;}
+#TB_window a:active {color: #666666;}
+#TB_window a:focus{color: #666666;}
+
+/* ----------------------------------------------------------------------------------------------------------------*/
+/* ---------->>> thickbox settings <<<-----------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------*/
+#TB_overlay {
+	position: fixed;
+	z-index:100;
+	top: 0px;
+	left: 0px;
+	height:100%;
+	width:100%;
+}
+
+.TB_overlayMacFFBGHack {background: url(macFFBgHack.png) repeat;}
+.TB_overlayBG {
+	background-color:#000;
+	filter:alpha(opacity=75);
+	-moz-opacity: 0.75;
+	opacity: 0.75;
+}
+
+* html #TB_overlay { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+#TB_window {
+	position: fixed;
+	background: #ffffff;
+	z-index: 102;
+	color:#000000;
+	display:none;
+	border: 4px solid #525252;
+	text-align:left;
+	top:50%;
+	left:50%;
+}
+
+* html #TB_window { /* ie6 hack */
+position: absolute;
+margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
+
+#TB_window img#TB_Image {
+	display:block;
+	margin: 15px 0 0 15px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+}
+
+#TB_caption{
+	height:25px;
+	padding:7px 30px 10px 25px;
+	float:left;
+}
+
+#TB_closeWindow{
+	height:25px;
+	padding:11px 25px 10px 0;
+	float:right;
+}
+
+#TB_closeAjaxWindow{
+	padding:7px 10px 5px 0;
+	margin-bottom:1px;
+	text-align:right;
+	float:right;
+}
+
+#TB_ajaxWindowTitle{
+	float:left;
+	padding:7px 0 5px 10px;
+	margin-bottom:1px;
+}
+
+#TB_title{
+	background-color:#CAE1FF;
+	height:27px;
+}
+
+#TB_ajaxContent{
+	clear:both;
+	padding:2px 15px 15px 15px;
+	overflow:auto;
+	text-align:left;
+	line-height:1.4em;
+}
+
+#TB_ajaxContent.TB_modal{
+	padding:15px;
+}
+
+#TB_ajaxContent p{
+	padding:5px 0px 5px 0px;
+}
+
+#TB_load{
+	position: fixed;
+	display:none;
+	height:13px;
+	width:208px;
+	z-index:103;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -104px; /* -height/2 0 0 -width/2 */
+}
+
+* html #TB_load { /* ie6 hack */
+position: absolute;
+margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
+
+#TB_HideSelect{
+	z-index:99;
+	position:fixed;
+	top: 0;
+	left: 0;
+	background-color:#fff;
+	border:none;
+	filter:alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+	height:100%;
+	width:100%;
+}
+
+* html #TB_HideSelect { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+#TB_iframeContent{
+	clear:both;
+	border:none;
+	margin-bottom:-1px;
+	margin-top:1px;
+	_margin-bottom:1px;
+}
+
+.fixedBar{position: fixed;top: 50%;left: 0;z-index: 9999;height: 270px;width:44px;background: #f55c6b;}
+*html,*html body{background-image: url(about:blank);background-attachment: fixed;}
+*html .fixedBar{position: absolute;top: expression(document.documentElement.clientHeight + documentElement.scrollTop-this.offsetHeight + "px");margin-top: -60px;}
+.fixedBarMain{position: relative;z-index:12;background-color: #f55c6b;}
+.fixedBarMain ul{list-style: none;}
+.fixedBarMain li{width: 44px;height: 60px;list-style: none;cursor: pointer;vertical-align: top;}
+.fixedBarBnt a{height: 60px;width: 44px;overflow: hidden;text-align: center;color: #fff;text-decoration: none; display: block;}
+.fixedBarBnt a:hover,.fixedBarMain .current .fixedBarBnt a{background-color:#f47a86;}
+.fixedBarBnt  b.fixed-text{font: 12px/24px "microsoft yahei";display: block;}
+.fixedBarBnt  .fixed-icon{display: inline-block;*display: inline;*zoom: 1;width: 20px;height: 25px;overflow: hidden;margin-top: 10px;background-repeat: no-repeat;background-image:url(../image/toolbar_V2.png);font-size: 0;line-height: 0;}
+.fixedBarBnt .qd{background-position: 0 0;}
+.fixedBarBnt .tq{background-position: 0 -32px;}
+.fixedBarBnt .iphone{background-position: 0 -64px;}
+.fixedBarBnt .az{background-position: 0 -195px;}
+.fixedBarBnt .rl{background-position: 0 -96px;}
+.fixedBarBnt .aqy{background-position: 0 -128px;}
+.fixedBarBnt .muisc{background-position: 0 -156px;}
+.fixedBarBnt .share{background-position: 0 -188px;}
+     
+.fixedBarCont{width: auto;height: 420px;position: absolute;top: 0;left: 0;display: none;opacity: 0;filter: alpha(opacity=0);z-index: 10;background-color: #fff;}
+
+
+.bdshare_popup_box{display: none!important;}
+.bdshare-button-style0-32 a{
+	margin: 0!important;
+	height: 60px!important;width: 50px!important;
+	background-image: url("../images/shareBg.png")!important;
+	overflow: hidden;
+display: block;
+}
+.bdshare-button-style0-32 a:hover{opacity: 1!important;
+filter: alpha(opacity=100)!important;}
+.bdshare_dialog_box{border-width: 1px!important;height: 380px!important;width:600px!important;}
+.bdshare_dialog_bg{width: 602px!important;height: 330px!important;}
+.bdshare_dialog_list{height: 306px!important;}
